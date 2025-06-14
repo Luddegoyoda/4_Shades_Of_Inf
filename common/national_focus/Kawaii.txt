@@ -1,0 +1,2860 @@
+focus_tree = {
+    id = kawaii_focus
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = KAW
+        }
+    }
+	
+	default = no
+	
+	continuous_focus_position = { x = 150 y = 1500 }
+	
+	
+	
+	
+	###########################
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = KAW_Kawaii_Reverance
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 8
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 120
+		  hidden_effect = {
+			  transfer_state = 629
+			  transfer_state = 974
+			  transfer_state = 975
+			  transfer_state = 976
+		  }
+		  
+			}
+		}
+		
+		focus = {
+		id = KAW_Promote_Industrialisation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_industry_1
+		x = -6
+		y = 1
+		relative_position_id = KAW_Kawaii_Reverance
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Reverance }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		   random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Military_Construction
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		relative_position_id = KAW_Promote_Industrialisation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Promote_Industrialisation }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Engineering_Corps
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Military_Construction
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = engineering_corps
+			}
+		}
+		
+		focus = {
+		id = KAW_Resource_Deposits
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Engineering_Corps
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Engineering_Corps }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+					type = steel
+					amount = 14
+					}
+			add_resource = {
+					type = aluminium
+					amount = 12
+					}
+			add_resource = {
+					type = chromium
+					amount = 8
+					}
+				}
+			
+			}
+		}
+		
+		
+		focus = {
+		id = KAW_Establish_Large_Cities
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_industry_2
+		x = 1
+		y = 1
+		relative_position_id = KAW_Promote_Industrialisation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Promote_Industrialisation }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Ministry_of_Transportation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = KAW_Establish_Large_Cities
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Establish_Large_Cities }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			629 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}
+			974 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}
+			975 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}
+			976 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}
+
+			}
+		}
+		
+		####################################################
+		
+		focus = {
+		id = KAW_Develop_Egirls
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 6
+		y = 1
+		relative_position_id = KAW_Kawaii_Reverance
+		ai_will_do = {
+			factor = 80
+		}
+		available = {
+				if = {
+				has_tech = mechanical_computing
+				}
+			}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Reverance }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = e_girl1
+			}
+		}
+		
+		focus = {
+		id = KAW_Engineered_Attractiveness
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Develop_Egirls
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Develop_Egirls }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = e_girl1
+			add_idea = e_girl2
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Attract_Otakus
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Engineered_Attractiveness
+		
+		available = {
+				if = {
+				has_tech = decimetric_radar
+				}
+			}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Engineered_Attractiveness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = e_girl2
+			add_idea = e_girl3
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Develop_Catgirls
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Attract_Otakus
+		
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = KAW_Attract_Otakus }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = e_girl3
+			add_idea = e_girl4
+				}
+			add_ideas = neko_worship2
+			}
+		}
+		
+		
+		#################################
+		
+		focus = {
+		id = KAW_Military_Application
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = KAW_Develop_Egirls
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Develop_Egirls }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+				name = KAW_military_application
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Kawaii_Brigades
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = KAW_Military_Application
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Military_Application }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = kawaii_brigades
+			}
+		}
+		
+		focus = {
+		id = KAW_Improved_Equipment
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Kawaii_Brigades
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Brigades }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KAW_improved_equipment
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Nursing_Corps
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = KAW_Military_Application
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Military_Application }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = nursing_corps
+			}
+		}
+		
+		focus = {
+		id = KAW_Battle_Planning
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Nursing_Corps
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Nursing_Corps }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = battle_planning
+			}
+		}
+		
+		focus = {
+		id = KAW_Choke_Them
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 3
+		y = 1
+		relative_position_id = KAW_Military_Application
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Military_Application }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = choke_them
+			}
+		}
+		
+		
+		
+		focus = {
+		id = KAW_Its_Better_In_The_Dark
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Choke_Them
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Choke_Them }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			swap_ideas = {
+				remove_idea = choke_them
+				add_idea = choke_them2
+			}
+			
+			}
+		}
+		
+		focus = {
+		id = KAW_Perfection_Is_Key
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Its_Better_In_The_Dark
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Its_Better_In_The_Dark }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			}
+		}
+		
+		#################################
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_Strengthen_Sakura
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Kawaii_Reverance
+		ai_will_do = {
+			factor = 95
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Reverance }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+		    add_country_leader_trait = kawaii_preacher
+			}
+		}
+		
+		
+		
+		focus = {
+		id = KAW_Communal_Promises
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Strengthen_Sakura
+		ai_will_do = {
+			factor = 90
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Strengthen_Sakura }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = reclusive_society
+			add_idea = reclusive_society2
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Establish_the_Uwuversity
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_research
+		x = -2
+		y = 1
+		relative_position_id = KAW_Communal_Promises
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Communal_Promises }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+		
+		focus = {
+		id = KAW_Entertainment_Industry
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Establish_the_Uwuversity
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Establish_the_Uwuversity }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = reclusive_society2
+			add_idea = reclusive_society3
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Industrial_Development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_industry_3
+		x = 2
+		y = 1
+		relative_position_id = KAW_Communal_Promises
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Communal_Promises }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = weak_industry1
+			add_idea = weak_industry2
+				}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Maritime_Investments
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		relative_position_id = KAW_Industrial_Development
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Industrial_Development }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+			
+		}
+		
+		focus = {
+		id = KAW_Rural_Development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Communal_Promises
+		ai_will_do = {
+			factor = 85
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Communal_Promises }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Land_of_Love
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Rural_Development
+		ai_will_do = {
+			factor = 85
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Rural_Development }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = land_of_love
+			629 = { add_manpower = 5000}
+			936 = { add_manpower = 5000}
+			}
+		}
+		
+		focus = {
+		id = KAW_Kawaii_Competition
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Land_of_Love
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_completed_focus = KAW_Develop_Egirls
+			}
+			
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Land_of_Love }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = kawaii.1
+			}
+		}
+		
+		focus = {
+		id = KAW_Traditionalist_Win
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = KAW_Kawaii_Competition
+			
+			allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = KAW_Reformist_Victory
+					}
+				}
+			}
+			
+			available = {
+				if = {
+				has_idea = traditionalist_superiority
+				}
+			}	
+			
+		bypass = {
+			if = {
+				has_idea = traditionalist_superiority
+				}
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Competition }
+		mutually_exclusive = { focus = KAW_Reformist_Victory }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		focus = {
+		id = KAW_Reformist_Victory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = KAW_Kawaii_Competition
+			
+			allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = KAW_Traditionalist_Win
+					}
+				}
+			}
+			
+		available = {
+				if = {
+				has_idea = reformist_superiority
+				}
+			}	
+		
+		bypass = {
+			if = {
+				has_idea = reformist_superiority
+				}
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Competition }
+		mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		focus = {
+		id = KAW_Involvement_of_Kawaii
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 2
+		relative_position_id = KAW_Kawaii_Competition
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Competition }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		hidden_effect = {
+				add_named_threat = { threat = 3 name = "Kawaii involvement" }
+				set_rule = { can_declare_war_on_same_ideology = yes }
+				set_rule = { can_puppet = yes }
+				
+			}
+			set_rule = { can_send_volunteers = yes }
+			set_rule = { can_create_factions = yes }
+			add_ideas = kawaii_involvement
+			}
+		}
+		
+		
+		focus = {
+		id = KAW_Request_Pacific_Territories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		relative_position_id = KAW_Involvement_of_Kawaii
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Involvement_of_Kawaii }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		FRA = { 
+				country_event = { id = france.50 }
+				}
+		USA = { 
+				country_event = { id = usa.80 }
+				}
+		JAP = { 
+				country_event = { id = japan.25 }
+				}
+			}
+		}
+		
+		
+		focus = {
+		id = KAW_Meet_The_British
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_chi_british_cooperation
+		x = 0
+		y = 1
+		relative_position_id = KAW_Request_Pacific_Territories
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Request_Pacific_Territories }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		ENG = { 
+				add_opinion_modifier = { target = KAW modifier = huge_increase}
+				country_event = { id = britain.88 }
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Thai_Kawaiification
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Meet_The_British
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Meet_The_British }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation focus = KAW_Second_Most_Kawaii }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = SIA }
+			}
+		}
+		
+		
+		
+		
+		focus = {
+		id = KAW_Confirm_Superiority
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = KAW_Traditionalist_Win
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Traditionalist_Win }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = traditionalist_superiority
+				add_idea = traditionalist_superiority2
+				}
+				hidden_effect = { country_event = { id = kawaii.11 days = 220 } }
+			}
+		}
+		
+		focus = {
+		id = KAW_Consolidate_Power
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -6
+		y = 1
+		relative_position_id = KAW_Confirm_Superiority
+			
+		available = {
+			has_country_leader = {
+			character = KAW_Sakura
+			ruling_only = yes
+			}
+		}
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Confirm_Superiority }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_country_leader_trait = authoritative
+			}
+		}
+		
+		focus = {
+		id = KAW_Mandatory_Aestetics
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = KAW_Consolidate_Power
+			
+		available = {
+			has_country_leader = {
+			character = KAW_Sakura
+			ruling_only = yes
+			}
+		}
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Consolidate_Power }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = mandatory_aestetics
+				bonus = 1.0
+				uses = 2
+				category = industry
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_Industrial_Society
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = KAW_Confirm_Superiority
+		
+		available = {
+			has_completed_focus = KAW_Industrial_Development
+			has_country_leader = {
+			character = KAW_Sakura
+			ruling_only = yes
+			}
+			}
+			
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Confirm_Superiority }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = weak_industry2
+				add_idea = weak_industry3
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Kawaii_School_Uniforms
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_research2
+		x = -2
+		y = 1
+		relative_position_id = KAW_Industrial_Society
+			
+		available = {
+			has_country_leader = {
+			character = KAW_Sakura
+			ruling_only = yes
+			}
+		}
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Industrial_Society  focus = KAW_Consolidate_Power}
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = kawaii_uniforms
+			}
+		}
+		
+		focus = {
+		id = KAW_Foreign_Investments
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Industrial_Society
+			
+		available = {
+			has_country_leader = {
+			character = KAW_Sakura
+			ruling_only = yes
+			}
+		}
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Industrial_Society }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			}
+		}
+
+		focus = {
+		id = KAW_Education_Reform
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_research
+		x = 2
+		y = 1
+		relative_position_id = KAW_Industrial_Society
+		
+		
+		available = {
+			has_country_leader = {
+			character = KAW_Sakura
+			ruling_only = yes
+			}
+		}
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Industrial_Society }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_Claim_Leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 3
+		y = 1
+		relative_position_id = KAW_Reformist_Victory
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Reformist_Victory }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  KAW_Kinsi = { 
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = e_girl
+						
+						}
+					promote_leader = yes
+					}
+				}
+			swap_ideas = {
+				remove_idea = reformist_superiority
+				add_idea = reformist_superiority2
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Kawaii_Electronics
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = KAW_Claim_Leadership
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Claim_Leadership }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = kawaii_electronics
+				bonus = 1.0
+				uses = 2
+				category = electronics
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Tech_Capital
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = KAW_Kawaii_Electronics
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Electronics }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = kawaii_electronics
+				bonus = 1.0
+				uses = 1
+				category = electronics
+				}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Gender_Inclusivity
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = KAW_Kawaii_Electronics
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Electronics }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = gender_inclusivity
+			}
+		}
+		
+		focus = {
+		id = KAW_Fashion_Industry
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 6
+		y = 1
+		relative_position_id = KAW_Claim_Leadership
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Claim_Leadership }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				}
+			add_ideas = fashion_industry
+			}
+		}
+		
+		focus = {
+		id = KAW_Scrunchies
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = KAW_Fashion_Industry
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Fashion_Industry }
+		mutually_exclusive = { focus = KAW_Chokers }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fashion_industry
+				add_idea = fashion_industry_scrunchies
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Chokers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = KAW_Fashion_Industry
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Fashion_Industry }
+		mutually_exclusive = { focus = KAW_Scrunchies }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fashion_industry
+				add_idea = fashion_industry_chokers
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Fishnet_Stockings
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 2
+		relative_position_id = KAW_Fashion_Industry
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Chokers focus = KAW_Scrunchies }
+		mutually_exclusive = { focus = KAW_Thigh_High_Socks }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+			if = {
+				limit = {
+					has_idea = fashion_industry_chokers
+				}
+				swap_ideas = {
+					remove_idea = fashion_industry_chokers
+					add_idea = fashion_industry_chokers_stockings
+					}
+				}
+				
+			if = {
+				limit = {
+					has_idea = fashion_industry_scrunchies
+				}
+				swap_ideas = {
+					remove_idea = fashion_industry_scrunchies
+					add_idea = fashion_industry_scrunchies_stockings
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Thigh_High_Socks
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 2
+		relative_position_id = KAW_Fashion_Industry
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Chokers focus = KAW_Scrunchies }
+		mutually_exclusive = { focus = KAW_Fishnet_Stockings }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = fashion_industry_chokers
+				}
+				swap_ideas = {
+					remove_idea = fashion_industry_chokers
+					add_idea = fashion_industry_chokers_thigh_high
+					}
+				}
+				
+			if = {
+				limit = {
+					has_idea = fashion_industry_scrunchies
+				}
+				swap_ideas = {
+					remove_idea = fashion_industry_scrunchies
+					add_idea = fashion_industry_scrunchies_thigh_high
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		#######################################
+		
+		
+		focus = {
+		id = KAW_10_Years_of_Kawaii
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 18
+		y = -1
+		relative_position_id = KAW_Develop_Egirls
+			
+		ai_will_do = {
+			factor = 100
+		}
+			
+		available = {
+			date > 1938.1.1
+			has_completed_focus = KAW_Kawaii_Competition
+		}
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		#prerequisite = { focus = KAW_Industrial_Society }
+		#mutually_exclusive = { focus =  KAW_Traditionalist_Win}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			}
+		}
+		
+		focus = {
+		id = KAW_Army_Parades
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = KAW_10_Years_of_Kawaii
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_10_Years_of_Kawaii }
+		#mutually_exclusive = { focus =  KAW_Embrace_The_Dark}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+			}
+		}
+		
+		focus = {
+		id = KAW_Kawaii_Bun_Bakery
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_10_Years_of_Kawaii
+		
+		ai_will_do = {
+			factor = 90
+		}
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_10_Years_of_Kawaii }
+		#mutually_exclusive = { focus =  KAW_Embrace_The_Dark}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = kawaii_bun_bakery
+			}
+		}
+		
+		focus = {
+		id = KAW_Research_Grants
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_research
+		x = 2
+		y = 1
+		relative_position_id = KAW_10_Years_of_Kawaii
+		
+		ai_will_do = {
+			factor = 65
+		}
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_10_Years_of_Kawaii }
+		#mutually_exclusive = { focus =  KAW_Embrace_The_Dark}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_Emerald_Reformation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 2
+		relative_position_id = KAW_Kawaii_Bun_Bakery
+		ai_will_do = {
+			factor = 90
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Bun_Bakery }
+		mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_EGirl_Superiority}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		hidden_effect = {
+				add_named_threat = { threat = 1 name = "Emerald_Reformation" }
+			}
+			country_event = kawaii.8
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		
+		focus = {
+		id = KAW_Construct_Royal_Palace
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = KAW_Emerald_Reformation
+		
+		allow_branch = {
+            has_completed_focus = KAW_Emerald_Reformation
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Emerald_Reformation }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = royal_palace1
+			}
+		}
+		
+		
+		
+		focus = {
+		id = KAW_Bestow_Titles
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Construct_Royal_Palace
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Construct_Royal_Palace }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_country_leader_trait = authoritative
+			add_country_leader_trait = emerald_queen
+			}
+		}
+		
+	focus = {
+		id = KAW_Search_For_MC
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = KAW_Bestow_Titles
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Bestow_Titles }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			JAP = {
+				country_event = japan.26
+			}
+		  
+			}
+		}
+		
+		focus = {
+		id = KAW_Extend_The_Search
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Search_For_MC
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Search_For_MC }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  JAP = {
+				country_event = japan.27
+			}
+			}
+		}
+		
+		focus = {
+		id = KAW_Unhindered_Mission
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Extend_The_Search
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Extend_The_Search }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		hidden_effect = {
+				add_named_threat = { threat = 3 name = "Unhindered mission" }
+			}
+			
+			create_wargoal = { type = annex_everything target = JAP }
+			}
+		}
+		
+		focus = {
+		id = KAW_Establish_The_Spaceroom
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Bestow_Titles
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Bestow_Titles }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = royal_palace1
+				add_idea = royal_palace2
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_No_Obstacle_Too_Large
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Establish_The_Spaceroom
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Establish_The_Spaceroom }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = royal_palace2
+			add_idea = royal_palace3
+			}
+			}
+		}
+		
+		focus = {
+		id = KAW_Console_Usage
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = KAW_Bestow_Titles
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Bestow_Titles }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = console_usage
+			}
+		}
+		
+		focus = {
+		id = KAW_Infiltrate_America
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Console_Usage
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Console_Usage }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = {
+				add_timed_idea = {
+				idea = kawaiist_influence
+				days = 720
+				}
+				}
+			}
+		}
+		
+		
+		
+		
+		focus = {
+		id = KAW_Promote_Education
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = KAW_Bestow_Titles
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Bestow_Titles }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = promote_education
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Programming_Classes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Promote_Education
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Promote_Education }
+		#mutually_exclusive = { focus = KAW_Embrace_The_Dark focus = KAW_Second_Most_Kawaii}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_tech_bonus = {
+				name = programming_classes
+				bonus = 1.0
+				uses = 2
+				category = electronics
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_EGirl_Superiority
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = KAW_Kawaii_Bun_Bakery
+		
+		ai_will_do = {
+			factor = 90
+		}
+
+		
+		bypass = {
+		
+		}
+		
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Bun_Bakery }
+		mutually_exclusive = { focus =  KAW_Embrace_The_Dark focus =  KAW_Emerald_Reformation}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+					add_named_threat = { threat = 3 name = "Egirl Supremacy" }
+				}
+			country_event = kawaii.9
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+	focus = {
+		id = KAW_Korean_Kawaiism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = KAW_EGirl_Superiority
+		
+		allow_branch = {
+            has_completed_focus = KAW_EGirl_Superiority
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_EGirl_Superiority }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 525
+			add_state_core = 525
+			}
+		}
+		
+		focus = {
+		id = KAW_Gateway_To_Atlantic
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_EGirl_Superiority
+		
+		allow_branch = {
+            has_completed_focus = KAW_EGirl_Superiority
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_EGirl_Superiority }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = { 
+				country_event = { id = usa.81 }
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Golden_State
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Gateway_To_Atlantic
+		
+		
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = KAW_Gateway_To_Atlantic }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = { 
+				country_event = { id = usa.82 }
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_Embrace_The_Dark
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 2
+		relative_position_id = KAW_Kawaii_Bun_Bakery
+		
+		ai_will_do = {
+			factor = 90
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Kawaii_Bun_Bakery }
+		mutually_exclusive = { focus = KAW_Emerald_Reformation focus = KAW_EGirl_Superiority }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		hidden_effect = {
+					add_named_threat = { threat = 8 name = "Embrace the dark" }
+				}
+			
+			country_event = kawaii.10
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		focus = {
+		id = KAW_They_Will_Suffer
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Embrace_The_Dark
+		
+		allow_branch = {
+            has_completed_focus = KAW_Embrace_The_Dark
+		}
+		
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = KAW_Embrace_The_Dark }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation focus = KAW_Second_Most_Kawaii }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = they_will_suffer
+			}
+		}
+		
+		focus = {
+		id = KAW_Everyone_A_Servant
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = KAW_Embrace_The_Dark
+		
+		allow_branch = {
+            has_completed_focus = KAW_Embrace_The_Dark
+		}
+		
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = KAW_Embrace_The_Dark }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation focus = KAW_Second_Most_Kawaii }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = everyone_a_servant
+			}
+		}
+		
+		focus = {
+		id = KAW_Construct_Dark_Temple
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = KAW_They_Will_Suffer
+		
+		
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = KAW_Everyone_A_Servant }
+		prerequisite = { focus = KAW_They_Will_Suffer }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation focus = KAW_Second_Most_Kawaii }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = dark_temple
+			}
+		}
+		
+		
+		focus = {
+		id = KAW_Our_Time
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 5
+		y = 1
+		relative_position_id = KAW_Embrace_The_Dark
+		
+		allow_branch = {
+            has_completed_focus = KAW_Embrace_The_Dark
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Embrace_The_Dark }
+		#mutually_exclusive = { focus = KAW_Emerald_Reformation focus = KAW_Second_Most_Kawaii }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = our_time
+			}
+		}
+		
+		
+		
+		focus = {
+		id = KAW_Goth_Leadership
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Our_Time
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Our_Time }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = goth_alliance
+			}
+		}
+		
+		
+		
+		focus = {
+		id = KAW_Create_The_Azur_Lane
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = KAW_Our_Time
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Our_Time }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		focus = {
+		id = KAW_Seduce_The_East_Indies
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = KAW_Create_The_Azur_Lane
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Create_The_Azur_Lane }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			HOL = {
+				set_autonomy = {
+				target = INS
+				autonomy_state = autonomy_free
+				}
+				remove_from_faction = INS
+			}
+			ENG = {
+				set_autonomy = {
+				target = MAL
+				autonomy_state = autonomy_free
+				}
+				remove_from_faction = MAL
+			}
+			}
+		}
+		
+		
+		
+		
+		
+		#################################################################
+		
+		
+		
+		
+		
+		
+		
+		
+		focus = {
+		id = KAW_Flying_Cuteness
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_build_airforce
+		x = -6
+		y = 0
+		relative_position_id = KAW_Promote_Industrialisation
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = KAW_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				}
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+	
+	focus = {
+		id = KAW_Blue_Skies
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_doctrine
+		x = -2
+		y = 1
+		relative_position_id = KAW_Flying_Cuteness
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Flying_Cuteness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+		
+	focus = {
+		id = KAW_Sunrise
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = KAW_Blue_Skies
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Blue_Skies }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+		
+		focus = {
+		id = KAW_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_bomber
+		x = 0
+		y = 1
+		relative_position_id = KAW_Flying_Cuteness
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Flying_Cuteness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+			}
+		}
+		
+	focus = {
+		id = KAW_More_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_occupy_start_war
+		x = 0
+		y = 1
+		relative_position_id = KAW_Bombers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Bombers }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.5
+				uses = 1
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+
+			}
+		}
+		
+		focus = {
+		id = KAW_Fighters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter
+		x = 2
+		y = 1
+		relative_position_id = KAW_Flying_Cuteness
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Flying_Cuteness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+			}
+		}
+		
+	focus = {
+		id = KAW_More_Fighters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+		relative_position_id = KAW_Fighters
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Fighters }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.5
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+
+			}
+		}
+
+	##################################################
+	
+	
+	focus = {
+		id = KAW_Establish_The_Kawaii_Fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_build_navy
+		x = -6
+		y = 3
+		relative_position_id = KAW_Promote_Industrialisation
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = KAW_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				}
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+	
+	focus = {
+		id = KAW_Discover_The_Steeringwheel
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+		relative_position_id = KAW_Establish_The_Kawaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Establish_The_Kawaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+		
+	focus = {
+		id = KAW_Discover_The_Rest_of_The_Ship
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		relative_position_id = KAW_Discover_The_Steeringwheel
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Discover_The_Steeringwheel }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+		
+		focus = {
+		id = KAW_Escorts
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_destroyer
+		x = 0
+		y = 1
+		relative_position_id = KAW_Establish_The_Kawaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Establish_The_Kawaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = escorts
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+				}
+			}
+		}
+		
+	focus = {
+		id = KAW_Mommy_Ships
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		relative_position_id = KAW_Escorts
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Escorts }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = Mommies
+				bonus = 1.5
+				uses = 1
+				category = cv_tech
+				}
+
+			}
+		}
+		
+		focus = {
+		id = KAW_Ocean_Liners
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_cruiser2
+		x = 2
+		y = 1
+		relative_position_id = KAW_Establish_The_Kawaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Establish_The_Kawaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = Cruisers
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+				}
+			}
+		}
+		
+	focus = {
+		id = KAW_Thicc_Ships
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		relative_position_id = KAW_Ocean_Liners
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = KAW_Ocean_Liners }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = thicc
+				bonus = 1.5
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+				}
+
+			}
+		}
+	
+	
+ }
+
+	

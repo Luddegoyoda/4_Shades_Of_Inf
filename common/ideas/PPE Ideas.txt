@@ -1,0 +1,91 @@
+ideas = {
+	country = {
+	
+	
+	flawed_democracy = {
+			picture = unknown
+			
+			allowed = {
+				tag = PPE
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.3
+				political_power_cost = 0.8
+			}
+		}
+		
+	yesmen = {
+			picture = unknown
+			
+			allowed = {
+				tag = PPE
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.5
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+			}
+		}
+		
+	prophets = {
+			picture = unknown
+			
+			allowed = {
+				tag = PPE
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.15
+			}
+		}
+
+	}
+}
+
+

@@ -1,0 +1,1590 @@
+focus_tree = {
+    id = imperial_expeditionary_forces
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = IEF
+        }
+    }
+	
+	default = no
+	
+	continuous_focus_position = { x = 20 y = 1000 }
+	
+	focus = {
+		id = IEF_Ensure_Regional_Loyalty
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 8
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 150
+		  add_stability = 0.05
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+					}
+				add_resource = {
+					type = tungsten
+					amount = 4
+					}
+				}
+				
+				
+				hidden_effect = {
+				AFG = {
+					add_ideas = disorganised_army
+				}
+				}
+			}
+		}
+		
+		focus = {
+		id = IEF_Train_Army
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = IEF_Ensure_Regional_Loyalty
+		ai_will_do = {
+			factor = 80
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Ensure_Regional_Loyalty }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  army_experience = 10
+		  add_ideas = mandatory_sixpacks
+			}
+		}
+		
+		focus = {
+		id = IEF_Aquire_Arms
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Ensure_Regional_Loyalty
+		ai_will_do = {
+			factor = 90
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Ensure_Regional_Loyalty }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+			}
+			}
+		}
+		
+		focus = {
+		id = IEF_Organise_Divisions
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = IEF_Ensure_Regional_Loyalty
+		ai_will_do = {
+			factor = 85
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Ensure_Regional_Loyalty }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  army_experience = 10
+		  swap_ideas = {
+		  remove_idea = disorganised_army
+		  add_idea = disorganised_army2
+		  }
+		  
+		  
+			}
+		}
+		
+		
+		
+		
+		focus = {
+		id = IEF_Afhanistan_delenda_est
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Aquire_Arms
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Train_Army focus = IEF_Aquire_Arms focus = IEF_Organise_Divisions }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = AFG }
+			}
+		}
+		
+		focus = {
+		id = IEF_Montaña_Nostrum
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Afhanistan_delenda_est
+		
+		available = {
+		IEF = { controls_state = 977 }
+		IEF = { controls_state = 415 }
+		IEF = { controls_state = 979 }
+		IEF = { controls_state = 267 }
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Afhanistan_delenda_est }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_capital = {
+			  state = 267
+			  remember_old_capital = yes
+			}
+		  add_state_core = 977
+		  add_state_core = 415
+		  add_state_core = 979
+		  add_state_core = 267
+			}
+		}
+		
+		focus = {
+		id = IEF_Full_Support
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = IEF_Afhanistan_delenda_est
+		ai_will_do = {
+			factor = 60
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Afhanistan_delenda_est }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			add_timed_idea = {
+				idea = military_focus
+				days = 210
+				}
+			}
+		}
+		
+		focus = {
+		id = IEF_Sketchy_Contacts
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = IEF_Afhanistan_delenda_est
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Afhanistan_delenda_est }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			add_offsite_building = { type = arms_factory level = 4 }
+			}
+		}
+		
+		
+		
+		focus = {
+		id = IEF_Develop_The_Desert
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 16
+		y = 0
+		relative_position_id = IEF_Ensure_Regional_Loyalty
+		ai_will_do = {
+			factor = 80
+		}
+		available = {
+			has_completed_focus = IEF_Montaña_Nostrum
+		}
+
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = IEF_Montaña_Nostrum }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			add_resource = {
+						type = tungsten
+						amount = 6
+						}
+					add_resource = {
+						type = steel
+						amount = 8
+						}
+					}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+					}
+				add_resource = {
+					type = steel
+					amount = 8
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = IEF_Industrial_Beginnings
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Develop_The_Desert
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Develop_The_Desert }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = unindustrialised_land
+			add_idea = unindustrialised_land2
+			}
+			}
+		}
+		
+	
+		
+	focus = {
+		id = IEF_Military_Investments
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = IEF_Develop_The_Desert
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Develop_The_Desert }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = IEF_Encourage_Arms_Production
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Military_Investments
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Military_Investments }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = encourage_arms_production
+			}
+		}
+		
+	
+		
+	focus = {
+		id = IEF_Civilian_Investments
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = IEF_Develop_The_Desert
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Develop_The_Desert }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		focus = {
+		id = IEF_Naval_Investments
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Civilian_Investments
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Civilian_Investments }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+				}
+			}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				}
+			}
+		}
+	
+	focus = {
+		id = IEF_Economic_Miracle
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Industrial_Beginnings
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Industrial_Beginnings }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = unindustrialised_land2
+			add_idea = slightly_industrialised_land
+			}
+		  random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		
+	focus = {
+		id = IEF_Resources_To_Fight
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = IEF_Encourage_Arms_Production
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Encourage_Arms_Production focus = IEF_Economic_Miracle }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+					add_resource = {
+						type = oil
+						amount = 40
+						}
+					add_resource = {
+						type = steel
+						amount = 25
+						}
+					add_resource = {
+						type = tungsten
+						amount = 12
+						}
+					}
+			}
+		}
+		
+	focus = {
+		id = IEF_Cut_Civilian_Investments
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = IEF_Economic_Miracle
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Naval_Investments focus = IEF_Economic_Miracle }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = cut_civilian_investments 
+			}
+		}
+		
+		
+		
+		
+		
+	
+		
+		
+	focus = {
+		id = IEF_Glory_Awaits
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		icon =  GFX_goal_support_fascism
+		x = 8
+		y = 0
+		relative_position_id = IEF_Ensure_Regional_Loyalty
+		
+		available = {
+			has_completed_focus = IEF_Montaña_Nostrum
+		}
+
+		
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = IEF_Develop_The_Desert }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 100
+		  add_ideas = glory_awaits
+			}
+		}
+		
+		focus = {
+		id = IEF_Schooling
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		icon =  GFX_focus_research
+		x = -2
+		y = 1
+		relative_position_id = IEF_Glory_Awaits
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Glory_Awaits  }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_research_slot = 1
+			}
+		}
+		
+	focus = {
+		id = IEF_Attack_Persia
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = IEF_Glory_Awaits
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Glory_Awaits }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			415 = {
+						add_building_construction = {
+							type = supply_node
+							level = 1
+							province = 12871
+							instant_build = yes
+						}
+					}
+				build_railway = {
+					path = { 12871 8053 12788 1995 7916 10737 } 
+				}
+		  create_wargoal = { type = annex_everything target = PER }
+			}
+		}
+		
+	focus = {
+		id = IEF_Integrate_Persians
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Attack_Persia
+		
+		available = {
+			IEF = {controls_state = 266}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Attack_Persia }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			build_railway = {
+					path = { 7982 1986 12809 12895 1948 2078 1995 7916 10737 } 
+				}
+		  add_state_core = 414
+		  add_state_core = 410
+		  add_state_core = 412
+		  add_state_core = 416
+		  add_state_core = 411
+		  add_state_core = 418
+		  add_state_core = 266
+			}
+		}
+		
+	focus = {
+		id = IEF_Rally_Behind_Victorius
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Glory_Awaits
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Glory_Awaits }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = glory_awaits
+				add_idea = glory_awaits2
+			}
+			}
+		}
+		
+	focus = {
+		id = IEF_To_The_Sea
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Rally_Behind_Victorius
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Rally_Behind_Victorius }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 444
+		  add_state_core = 444
+		  navy_experience = 20
+		  444 = {
+		  add_building_construction = {
+				type = naval_base
+				province = 7917
+				level = 2
+				}
+			hidden_effect = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+					}
+				}	
+				}
+			}
+		}
+		
+	focus = {
+		id = IEF_Demand_Abu_Dhabi
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = IEF_To_The_Sea
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_To_The_Sea }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  658 = { 
+					controller = {
+						country_event = { id = imperial_expeditionary.1 }
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = IEF_Oman_Buffer_Zone
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Demand_Abu_Dhabi
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Demand_Abu_Dhabi }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = OMA }
+			}
+		}
+		
+	focus = {
+		id = IEF_Pakistan_For_Promises
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_To_The_Sea
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_To_The_Sea }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 445
+		  transfer_state = 442
+		  transfer_state = 787
+		  add_state_core = 445
+		  add_state_core = 442
+		  add_state_core = 787
+		  add_ideas = lack_of_patriotism
+			}
+		}
+		
+	focus = {
+		id = IEF_Break_Promises
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Pakistan_For_Promises
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Pakistan_For_Promises }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 443
+		  transfer_state = 440
+		  transfer_state = 441
+		  add_state_core = 443
+		  add_state_core = 440
+		  add_state_core = 441
+		  
+			}
+		}
+		
+		
+	focus = {
+		id = IEF_The_New_Arabia
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = IEF_Break_Promises
+		
+		available = {
+			IEF = {controls_state = 294}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Break_Promises }
+		prerequisite = { focus = IEF_Oman_Buffer_Zone }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = SAU }
+		  build_railway = {
+					path = { 2059 2018 5049 10760 } 
+				}
+
+				298 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 2059
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = IEF_Secure_Red_Sea_Acess
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_The_New_Arabia
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_The_New_Arabia }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = YEM }
+			}
+		}
+		
+	focus = {
+		id = IEF_Special_Derabbitifying_Operation
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Secure_Red_Sea_Acess
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Secure_Red_Sea_Acess }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = DRC }
+			}
+		}
+		
+	focus = {
+		id = IEF_March_East
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = IEF_Break_Promises
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Break_Promises }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = TIB }
+		  
+		  build_railway = {
+					path = { 12884 7316 12754 10887 } 
+				}
+
+				441 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 12884
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+	
+		
+	focus = {
+		id = IEF_Invade_Western_China
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_March_East
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_March_East }
+		mutually_exclusive = { focus = IEF_Yarkand_Deal }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = SIK }
+			}
+		}
+		
+	focus = {
+		id = IEF_Yarkand_Deal
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = IEF_March_East
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_March_East }
+		mutually_exclusive = { focus = IEF_Invade_Western_China }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 619
+			transfer_state = 287
+			transfer_state = 759
+			add_state_core = 619
+			add_state_core = 287
+			add_state_core = 759
+			}
+		}
+		
+	focus = {
+		id = IEF_Soviet_Promises
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = IEF_Invade_Western_China
+		
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Invade_Western_China focus = IEF_Yarkand_Deal}
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 584
+			transfer_state = 830
+			transfer_state = 742
+			transfer_state = 405
+			transfer_state = 732
+			add_state_core = 584
+			add_state_core = 830
+			add_state_core = 742
+			add_state_core = 405
+			add_state_core = 732
+			}
+		}
+		
+		
+		
+		
+		
+	focus = {
+		id = IEF_Military_Reorganisation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_axis_build_infantry
+		x = 1
+		y = 5
+		relative_position_id = IEF_Develop_The_Desert
+		
+		available = {
+			has_completed_focus = IEF_Montaña_Nostrum
+		}
+
+		
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = IEF_Develop_The_Desert }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = disorganised_army2
+			add_idea = organised_army
+			}
+			}
+		}
+	
+	
+	focus = {
+		id = IEF_Establish_Dubai_Arms
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Military_Reorganisation
+		
+		available = {
+			IEF = {controls_state = 658}
+		}
+
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Military_Reorganisation }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			658 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+					}
+				}	
+			}
+		}
+		
+		focus = {
+		id = IEF_Weapons_Development
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = IEF_Establish_Dubai_Arms
+
+		available = {
+			IEF = {controls_state = 658}
+		}
+	
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Establish_Dubai_Arms }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = IEF_Weapons_Development
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+				}
+			}
+		}
+		
+		focus = {
+		id = IEF_Military_Research_Institute
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		icon =  GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = IEF_Establish_Dubai_Arms
+
+		available = {
+			IEF = {controls_state = 658}
+		}
+
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Establish_Dubai_Arms }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+		
+		focus = {
+		id = IEF_Develop_Dubai
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Weapons_Development
+		
+		available = {
+			IEF = {controls_state = 658}
+		}
+
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Weapons_Development }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			658 = {
+				658 = { add_manpower = 250000}
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+			}
+			}
+		}
+		
+		focus = {
+		id = IEF_Extract_Resources
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = IEF_Develop_Dubai
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Develop_Dubai }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+					add_resource = {
+						type = steel
+						amount = 12
+						}
+					add_resource = {
+						type = aluminium
+						amount = 12
+						}
+					add_resource = {
+						type = rubber
+						amount = 10
+						}
+					}
+			}
+		}
+		
+		focus = {
+		id = IEF_Air_Superiority
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter
+		x = 2
+		y = 1
+		relative_position_id = IEF_Establish_Dubai_Arms
+		
+		available = {
+			IEF = {controls_state = 658}
+		}
+
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Establish_Dubai_Arms }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 2.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+			}
+		}
+		
+		focus = {
+		id = IEF_Mass_Produce_Drones
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter
+		x = -1
+		y = 1
+		relative_position_id = IEF_Air_Superiority
+		
+		available = {
+			IEF = {controls_state = 658}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Air_Superiority }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_ideas = mass_produced_drones
+			}
+		}
+		
+		focus = {
+		id = IEF_Death_From_Above
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+		relative_position_id = IEF_Air_Superiority
+		
+		available = {
+			IEF = {controls_state = 658}
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Air_Superiority }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_ideas = death_from_above
+			}
+		}
+	
+	focus = {
+		id = IEF_Long_Range_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_bomber
+		x = 0
+		y = 2
+		relative_position_id = IEF_Air_Superiority
+		
+		available = {
+			IEF = {controls_state = 658}
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Air_Superiority }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 2.0
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+			}
+		}
+		
+	focus = {
+		id = IEF_Ultimate_Destruction
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_rocketry
+		x = 0
+		y = 1
+		relative_position_id = IEF_Long_Range_Bombers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = IEF_Long_Range_Bombers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_tech_bonus = {
+				name = IEF_Destruction
+				bonus = 7.5
+				uses = 3
+				category = rocketry
+				category = nuclear
+				}
+			}
+		}
+	
+	
+} 
+	
+	
+
+
+	

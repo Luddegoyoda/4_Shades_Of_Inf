@@ -1,0 +1,16 @@
+KAW_balance_of_power_category = {
+		icon = GFX_decision_category_power_struggle
+		
+		allowed = {
+			original_tag = KAW
+		}
+		
+		priority = 90
+		
+		visible = {
+			#has_completed_focus = KAW_Kawaii_Competition
+		}
+	}
+	
+
+

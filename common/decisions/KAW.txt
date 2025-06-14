@@ -1,0 +1,90 @@
+
+KAW_balance_of_power_category = {
+	KAW_bop_reform_push = {
+			priority = 99
+			icon = GFX_decision_eng_trade_unions_demand
+			days_re_enable = 35
+
+			allowed = {
+				original_tag = KAW
+			}
+
+			visible = {
+
+				#has_completed_focus = ITA_triumph_in_africa_bba
+			}
+
+			available = {
+			
+			}
+
+			cost = 50
+
+			complete_effect = {
+				add_country_leader_trait = mussolini_minister_of_justice
+				hidden_effect = {
+					if = {
+					limit = {
+						has_idea = KAW_boosting_traditionalists
+					}
+					remove_power_balance_modifier = {
+						id = KAW_supremacy_balance
+						modifier = KAW_traditionalist_push
+						}
+					remove_ideas = KAW_boosting_traditionalists
+					}
+				
+				}
+				add_power_balance_modifier = {
+				    id = KAW_supremacy_balance    
+					modifier = KAW_reformist_push 
+					}
+					add_ideas = KAW_boosting_reformists
+				
+				}
+			}
+		
+	KAW_bop_traditionalist_push = {
+			priority = 99
+			icon = GFX_decision_eng_trade_unions_demand
+			days_re_enable = 35
+
+			allowed = {
+				original_tag = KAW
+			}
+
+			visible = {
+
+				#has_completed_focus = ITA_triumph_in_africa_bba
+			}
+
+			available = {
+			
+			}
+
+			cost = 50
+
+			complete_effect = {
+				add_country_leader_trait = mussolini_minister_of_justice
+				hidden_effect = {
+					if = {
+					limit = {
+						has_idea = KAW_boosting_reformists
+					}
+					remove_power_balance_modifier = {
+						id = KAW_supremacy_balance
+						modifier = KAW_reformist_push
+						}
+						remove_ideas = KAW_boosting_reformists
+					}
+				
+				}
+				add_power_balance_modifier = {
+				    id = KAW_supremacy_balance    
+					modifier = KAW_traditionalist_push 
+					}
+					add_ideas = KAW_boosting_traditionalists
+				
+			}
+		}
+	}

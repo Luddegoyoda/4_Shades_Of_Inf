@@ -1,0 +1,351 @@
+characters = {
+	IEF_Victorius = {
+		name = IEF_Victorius
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_ief_victorius_large"
+				small=  "GFX_portrait_ief_victorius_small"
+			}
+		}
+		country_leader = {
+			ideology = nazism 
+			traits={ mathematical_genius chess_world_champion dictator}
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander = {
+			traits={ brilliant_strategist  }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
+	
+	IEF_Commander = {
+		name = IEF_Commander
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_KAW_kinsi_large"
+				small=  "GFX_portrait_KAW_kinsi_small"
+			}
+		}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
+	
+
+	
+	
+	IEF_Aiko = {
+		name = IEF_Aiko
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_IEF_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IEF_Aiko
+			allowed  = {
+				original_tag  = IEF
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				captain_of_industry
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	IEF_Emi = {
+		name = IEF_Emi
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_IEF_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IEF_Emi
+			allowed  = {
+				original_tag  = IEF
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				technocrat
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	IEF_Tomiko = {
+		name = IEF_Tomiko
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_IEF_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IEF_Tomiko
+			allowed  = {
+				original_tag  = IEF
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				war_industrialist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	IEF_Suzuki = {
+		name = IEF_Suzuki
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_IEF_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IEF_Suzuki
+			allowed  = {
+				original_tag  = IEF
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				silent_workhorse
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	##################################################
+	
+	IEF_Yasu = {
+		name = IEF_Yasu
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_IEF_monika_small"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = IEF_Yasu
+			allowed  = {
+				original_tag  = IEF
+			}
+			cost = 100
+			available  = {
+		
+			}
+			traits  = {
+				military_theorist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	####################################
+	
+	IEF_Takara = {
+		name= IEF_Takara
+		portraits={
+			army={
+				small="GFX_idea_john_vereker"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = IEF_Takara
+			allowed = {
+				original_tag = IEF
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	IEF_Shinobu = {
+		name = IEF_Shinobu
+		portraits={
+			army={
+				small="GFX_idea_henry_arnold"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = IEF_Shinobu
+			allowed = {
+				original_tag = IEF
+			}
+			traits = {
+				air_chief_reform_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+	IEF_Sora = {
+		name = IEF_Sora
+		portraits = {
+			army={
+				small="GFX_idea_dudley_pound"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = IEF_Sora
+			allowed = {
+				original_tag = IEF
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	IEF_Riko = {
+		name=IEF_Riko
+		portraits = {
+			army={
+				small="GFX_idea_kenneth_anderson"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IEF_Riko
+			ledger = army
+			allowed = {
+				original_tag = IEF
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	IEF_Miyako = {
+		name = IEF_Miyako
+		portraits={
+			army={
+				small="GFX_idea_sholto_douglas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = IEF_Miyako
+			ledger = air
+			allowed = {
+				original_tag = IEF
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	IEF_Nanami = {
+		name=IEF_Nanami
+		portraits={
+			army={
+				small="GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = IEF_Nanami
+			ledger = army
+			available = {
+			}
+			allowed = {
+				original_tag = IEF
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+	
+	
+	
+}

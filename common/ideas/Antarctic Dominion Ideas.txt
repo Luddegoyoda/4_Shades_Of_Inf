@@ -1,0 +1,232 @@
+ideas = {
+	country = {
+	
+	
+	castaway = {
+			picture = unknown
+			
+			allowed = {
+				tag = ADO
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly_factor = -0.02
+				war_support_weekly = -0.02
+				
+			}
+		}
+		
+	castaway2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = ADO
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly_factor = -0.01
+				war_support_weekly = -0.02
+				
+			}
+		}
+		
+	castaway3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = ADO
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly_factor = 0.05
+				war_support_weekly = 0.05
+				
+			}
+		}
+		
+	new_home = {
+			picture = unknown
+			
+			allowed = {
+				tag = ADO
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.3
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.3 
+				
+			}
+		}
+		
+		merciful = {
+			picture = unknown
+			
+			allowed = {
+				tag = ADO
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth = -0.2
+				compliance_growth = 0.2
+			}
+		}
+		
+		ship_building = {
+			picture = unknown
+			
+			allowed = {
+				tag = ADO
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			
+			equipment_bonus = {
+				light_cruiser = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				}
+				
+			modifier = {
+				industrial_capacity_dockyard = 0.5
+			}
+		}
+		
+		less_is_more = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		antarctic_special_forces = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.1
+			}
+		}
+		
+		
+		
+
+	}
+}
+
+

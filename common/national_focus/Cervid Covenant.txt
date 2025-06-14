@@ -1,0 +1,3435 @@
+focus_tree = {
+    id = cervid_focus
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = CEC
+        }
+    }
+	
+	default = no
+	
+	continuous_focus_position = { x = 1400 y = 1500 }
+	
+	focus = {
+		id = CEC_Shaved_Heads
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_support_fascism
+		x = -5
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		mutually_exclusive = { focus = CEC_waking_up }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.2 }
+			}
+		}
+		
+		focus = {
+		id = CEC_Mass_Rallies
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Shaved_Heads
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Shaved_Heads }
+		#mutually_exclusice = { focus = CEC_waking_up }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 75
+		  add_popularity = { ideology = fascism popularity = 0.3 }
+			}
+		}
+		
+		focus = {
+		id = CEC_Seize_Malmö
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Mass_Rallies
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Mass_Rallies }
+		#mutually_exclusice = { focus = CEC_waking_up }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = { ruling_party = fascism elections_allowed = no }
+			add_popularity = { ideology = fascism popularity = 0.3 }
+			}
+		}
+		
+		
+	
+	
+	focus = {
+		id = CEC_waking_up
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_support_the_left_right
+		x = 12
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		mutually_exclusive = { focus = CEC_Shaved_Heads }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_popularity = { ideology = neutrality popularity = 0.1 }
+		  add_stability = 0.05
+			}
+		}
+		
+		focus = {
+		id = CEC_Sect_Rituals
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_waking_up
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_waking_up }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_popularity = { ideology = neutrality popularity = 0.1 }
+		  add_stability = 0.1
+		  add_ideas = sect_rituals
+			}
+		}
+		focus = {
+		id = CEC_Eldritch_Incantations
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Sect_Rituals
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Sect_Rituals }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_popularity = { ideology = neutrality popularity = 0.2 }
+		  swap_ideas = {
+			remove_idea = sect_rituals
+			add_idea = sect_rituals2
+			}
+			}
+		}
+		focus = {
+		id = CEC_Sect_Mobilization
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Eldritch_Incantations
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Eldritch_Incantations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = { ruling_party = neutrality elections_allowed = no }
+			add_popularity = { ideology = neutrality popularity = 0.2 }
+			}
+		}
+		
+		focus = {
+		id = CEC_Whispers_of_the_Forest
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Sect_Rituals
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Sect_Rituals }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = sect_rituals2
+			add_idea = sect_rituals3
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Spellbound_Zealots
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Whispers_of_the_Forest
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Whispers_of_the_Forest }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = sect_rituals3
+			add_idea = sect_rituals4
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Devotion_Is_Power
+		search_filters = { FOCUS_FILTER_MANPOWER}
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = CEC_Sect_Mobilization
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Sect_Mobilization }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = devotion_is_power1
+			}
+		}
+		
+		focus = {
+		id = CEC_Indoctrination
+		search_filters = { FOCUS_FILTER_MANPOWER}
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Devotion_Is_Power
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Devotion_Is_Power }
+		prerequisite = { focus = CEC_Silencing_Dissent }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+		  remove_idea = devotion_is_power1
+		  add_idea = devotion_is_power2
+		  }
+			}
+		}
+		
+		focus = {
+		id = CEC_Silencing_Dissent
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 2
+		relative_position_id = CEC_Sect_Mobilization
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Sect_Mobilization }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = united_faith1
+			}
+		}
+		
+		
+		focus = {
+		id = CEC_Faith_Enforcers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Silencing_Dissent
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Silencing_Dissent }
+		prerequisite = { focus = CEC_Devotion_Is_Power }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+		  remove_idea = united_faith1
+		  add_idea = united_faith2
+		  }
+			}
+		}
+		
+		focus = {
+		id = CEC_Omniponent_Enforcers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Faith_Enforcers
+		
+		available = {
+			has_completed_focus = CEC_Transcendance
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Faith_Enforcers}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+		  remove_idea = united_faith2
+		  add_idea = united_faith3
+		  }
+			}
+		}
+		
+		
+		
+		
+		
+		##############################################################
+		
+		
+		focus = {
+		id = CEC_My_Absence_Is_Required
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -15
+		y = 1
+		relative_position_id = CEC_Sect_Mobilization
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = CEC_Holy_Visions
+					}
+				}
+			}
+		
+		bypass = {
+
+		}
+		cost = 5
+		mutually_exclusive = {focus = CEC_Holy_Visions }
+		prerequisite = { focus = CEC_Sect_Mobilization }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 331
+			add_state_core = 331
+			331 = { add_manpower = 300000}
+			SWE = {
+				transfer_state = 138
+			}
+			hidden_effect = {
+			news_event = cervid_news.1
+			}
+			mark_focus_tree_layout_dirty = yes
+			
+			}
+		}
+		
+		focus = {
+		id = CEC_Develop_The_Wastes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_My_Absence_Is_Required
+		
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_My_Absence_Is_Required }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			add_resource = {
+						type = tungsten
+						amount = 6
+						}
+					add_resource = {
+						type = steel
+						amount = 8
+						}
+					}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+					}
+				add_resource = {
+					type = steel
+					amount = 8
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Newfound_Mines
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_My_Absence_Is_Required
+		
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_My_Absence_Is_Required }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+						type = tungsten
+						amount = 18
+						}
+					add_resource = {
+						type = steel
+						amount = 20
+						}
+					add_resource = {
+						type = aluminium
+						amount = 10
+						}
+					}
+			
+			}
+		}
+		
+		focus = {
+		id = CEC_Seize_St._Pierre
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_My_Absence_Is_Required
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_My_Absence_Is_Required }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 730
+			add_state_core = 730
+			730 = { add_manpower = 50000}
+			add_research_slot = 1
+			}
+		}
+		
+		focus = {
+		id = CEC_Threaten_Danes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Seize_St._Pierre
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Seize_St._Pierre }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Moose_For_Labrador
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CEC_Seize_St._Pierre
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Seize_St._Pierre }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 332
+			add_state_core = 332
+			332 = { add_manpower = 50000}
+			}
+		}
+		
+		focus = {
+		id = CEC_Conciliate_Cote_Nord_Moose
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Moose_For_Labrador
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_For_Labrador }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 860
+			add_state_core = 860
+			860 = { add_manpower = 50000}
+			}
+		}
+		
+		focus = {
+		id = CEC_Labrador_Greenland_Treaty
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Moose_For_Labrador
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_For_Labrador }
+		prerequisite = { focus = CEC_Threaten_Danes }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 101
+			add_state_core = 101
+			101 = { add_manpower = 50000}
+			}
+		}
+		
+		focus = {
+		id = CEC_Icelandic_Foothold
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = CEC_Moose_For_Labrador
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Threaten_Danes }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 100
+			add_state_core = 100
+			100 = { add_manpower = 50000}
+			}
+		}
+		
+		focus = {
+		id = CEC_Fishing_Industry
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Icelandic_Foothold
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Icelandic_Foothold }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Sayonara_Saguenay
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Conciliate_Cote_Nord_Moose
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Conciliate_Cote_Nord_Moose }
+		prerequisite = { focus = CEC_Labrador_Greenland_Treaty }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 861
+			add_state_core = 861
+			861 = { add_manpower = 50000}
+			}
+		}
+		
+		focus = {
+		id = CEC_New_Nova_Scotia
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Conciliate_Cote_Nord_Moose
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Conciliate_Cote_Nord_Moose }
+		prerequisite = { focus = CEC_Labrador_Greenland_Treaty }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 465
+			transfer_state = 464
+			add_state_core = 464
+			add_state_core = 465
+			464 = { add_manpower = 50000}
+			465 = { add_manpower = 50000}
+			}
+		}
+		
+		focus = {
+		id = CEC_Establish_Moose_Council
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CEC_Sayonara_Saguenay
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Sayonara_Saguenay }
+		prerequisite = { focus = CEC_New_Nova_Scotia }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_country_leader_trait = moose_council
+			add_research_slot = 1
+			}
+		}
+		
+		focus = {
+		id = CEC_Take_A_Seat_Young_MacKenzie
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CEC_Establish_Moose_Council
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Establish_Moose_Council }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+			CAN = {
+				add_country_leader_trait = sat_down
+			}
+			
+			}
+		}
+		
+		focus = {
+		id = CEC_Cause_More_Wildlife_Collisions
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CEC_Establish_Moose_Council
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Establish_Moose_Council }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CAN = {
+			add_ideas = increased_wildlife_collisions
+			}
+			}
+		}
+		
+		
+		focus = {
+		id = CEC_To_Be_Amputee
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Take_A_Seat_Young_MacKenzie
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Take_A_Seat_Young_MacKenzie }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+			news_event = cervid_news.2
+			}
+			CAN = {
+				remove_country_leader_trait = sat_down
+				add_country_leader_trait = humiliated
+			}
+			
+			}
+		}
+		
+		focus = {
+		id = CEC_Blame_Canadians
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Cause_More_Wildlife_Collisions
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Cause_More_Wildlife_Collisions }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = CAN }
+			
+			}
+		}
+		
+		
+		focus = {
+		id = CEC_Unrecognize_Canada
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CEC_To_Be_Amputee
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Blame_Canadians focus = CEC_To_Be_Amputee}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ENG = {
+				set_autonomy = {
+				target = CAN
+				autonomy_state = autonomy_free
+				}
+				remove_from_faction = CAN
+			}
+			USA = {
+			diplomatic_relation = { 
+				country = CAN 
+				relation = guarantee 
+				active = no 
+			}
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Push_Roosevelt_Off_His_Wheelchair
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Unrecognize_Canada
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Unrecognize_Canada }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		hidden_effect = {
+		news_event = cervid_news.3
+		}
+		
+			USA = {
+				add_country_leader_trait = humiliated
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Alaska_Mishap
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Push_Roosevelt_Off_His_Wheelchair
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Push_Roosevelt_Off_His_Wheelchair }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 463
+			
+			USA = {
+			declare_war_on = { type = annex_everything    target = CEC }
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Behead_The_President
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Alaska_Mishap
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Alaska_Mishap }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				news_event = cervid_news.4
+			}
+			USA = {
+				kill_country_leader = yes
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Steal_Authentic_Taco_recipe
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Behead_The_President
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Behead_The_President }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = authentic_taco_recipie
+			}
+		}
+		
+		focus = {
+		id = CEC_Mexico_Has_Moose_Right?
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Steal_Authentic_Taco_recipe
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Steal_Authentic_Taco_recipe }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = MEX }
+			}
+		}
+		
+		
+		
+		
+		###############################
+
+		focus = {
+		id = CEC_Holy_Visions
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -7
+		y = 1
+		relative_position_id = CEC_Sect_Mobilization
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		available = {
+			
+			has_completed_focus = CEC_Spellbound_Zealots
+		}
+		
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = CEC_My_Absence_Is_Required
+					}
+				}
+			}
+		
+		bypass = {
+
+		}
+		cost = 5
+		mutually_exclusive = {focus = CEC_My_Absence_Is_Required }
+		prerequisite = { focus = CEC_Sect_Mobilization }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = DEN }
+			add_state_core = 37
+			add_state_core = 911
+			add_state_core = 99
+			add_state_core = 912
+			add_state_core = 910
+			add_state_core = 337
+			add_state_core = 101
+			add_state_core = 100
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		focus = {
+		id = CEC_Moose_Emissaries
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = CEC_Holy_Visions
+
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Holy_Visions}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 200
+		  add_ideas = scanian_emissaries
+		  
+			}
+		}
+		
+		
+		focus = {
+		id = CEC_Blackmail_Churchill
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = CEC_Moose_Emissaries
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Emissaries }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  
+			}
+		}
+		
+		
+		
+		focus = {
+		id = CEC_Grease_Adolfs_Palm
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CEC_Moose_Emissaries
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Emissaries }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  GER = { 
+				add_opinion_modifier = { target = CEC modifier = huge_increase}
+				}
+		  diplomatic_relation = { 
+			country = GER 
+			relation = non_aggression_pact 
+				}
+			add_timed_idea = {
+				idea = greasing_adolf
+				days = 75
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Discredit_German_Claims
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_Grease_Adolfs_Palm
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Grease_Adolfs_Palm }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  
+			}
+		}
+		
+		focus = {
+		id = CEC_Bend_Benito
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Grease_Adolfs_Palm
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Grease_Adolfs_Palm }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  ITA = { 
+				country_event = { id = italy.20 }
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Contact_Rasputin
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CEC_Moose_Emissaries
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Emissaries }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  SOV = { 
+				add_opinion_modifier = { target = CEC modifier = huge_increase}
+				}
+			add_stability = -0.1
+			}
+		}
+		
+		focus = {
+		id = CEC_Refute_Soviet_Claims
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Contact_Rasputin
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Contact_Rasputin }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  
+			}
+		}
+		
+		focus = {
+		id = CEC_Fabricate_Claims_On_Kola
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Refute_Soviet_Claims
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Refute_Soviet_Claims }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_state_core = 213
+		  create_wargoal = { type = annex_everything target = SOV }
+		  add_timed_idea = {
+				idea = i_am_speed
+				days = 90
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Moose_Fearbringers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CEC_Fabricate_Claims_On_Kola
+		available = {
+			has_completed_focus = CEC_Blackmail_Churchill
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Fabricate_Claims_On_Kola }
+		prerequisite = { focus = CEC_Bend_Benito }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		  swap_ideas = {
+			remove_idea = scanian_emissaries
+			add_idea = scanian_emissaries2
+				}
+			set_rule = { can_create_factions = yes }
+			}
+		}
+		
+		
+		
+		focus = {
+		id = CEC_Danish_Devotees
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_Holy_Visions
+		
+		
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Holy_Visions }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = devotees1
+			}
+		}
+		
+		focus = {
+		id = CEC_Revelations
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Holy_Visions
+		
+		available = {
+			CEC = { controls_state = 37 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Holy_Visions }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = SWE }
+			add_state_core = 139
+			add_state_core = 140
+			add_state_core = 124
+			add_state_core = 915
+			add_state_core = 913
+			add_state_core = 141
+			add_state_core = 919
+			add_state_core = 916
+			add_state_core = 38
+			add_state_core = 917
+			add_state_core = 918
+			add_state_core = 666
+			}
+		}
+		
+		focus = {
+		id = CEC_Swedish_Disciples
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = CEC_Revelations
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Revelations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = devotees1
+			add_idea = devotees2
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Empyrean_Insights
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CEC_Revelations
+		
+		available = {
+			CEC = { controls_state = 141 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Revelations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = FIN }
+			add_state_core = 145
+			add_state_core = 926
+			add_state_core = 111
+			add_state_core = 927
+			add_state_core = 149
+			add_state_core = 929
+			add_state_core = 148
+			add_state_core = 147
+			add_state_core = 722
+			add_state_core = 150
+			add_state_core = 930
+			add_state_core = 928
+			add_state_core = 146
+			}
+		}
+		
+		focus = {
+		id = CEC_Evangelists_To_Finland
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_Empyrean_Insights
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Empyrean_Insights }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = devotees2
+			add_idea = devotees3
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Gather_The_Sect
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 9
+		relative_position_id = CEC_Empyrean_Insights
+		available = {
+			has_idea = devotion_is_power2
+			OR = { 
+			CEC = { controls_state = 111}
+			CEC = { controls_state = 276}
+			}
+		}
+		cost = 10
+		prerequisite = { focus = CEC_Empyrean_Insights focus = CEC_Alaska_Mishap}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = sect_rituals4
+			add_idea = sect_rituals5
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Final_Ritual
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Gather_The_Sect
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = CEC_Gather_The_Sect}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = sect_rituals5
+			add_idea = sect_rituals6
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Sacrifices_Must_Be_Made
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Final_Ritual
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = CEC_Final_Ritual }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = sect_rituals6
+			add_idea = sect_rituals7
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Transcendance
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Sacrifices_Must_Be_Made
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = CEC_Sacrifices_Must_Be_Made }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = sect_rituals7
+			add_idea = transcendance
+			}
+		  country_event = cervid.1
+		  add_research_slot = 1
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		################################
+		
+		
+		
+		
+		focus = {
+		id = CEC_Moose_Industrilisation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_industry_1
+		x = 22
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+		ai_will_do = {
+			factor = 30
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Build_Kärnan2
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -6
+		y = 1
+		relative_position_id = CEC_Moose_Industrilisation
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = CEC_My_Absence_Is_Required
+					}
+				}
+			}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Industrilisation }
+		
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_building_construction = {
+							type = bunker
+							level = 5
+							province = {
+								id = 6345
+							}
+							instant_build = yes
+						}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Expand_Kärnan
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Build_Kärnan2
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Build_Kärnan2 }
+		
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_building_construction = {
+							type = bunker
+							level = 5
+							province = {
+								id = 6345
+							}
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+			add_building_construction = {
+							type = bunker
+							level = 5
+							province = {
+								id = 6287
+							}
+							instant_build = yes
+						}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Spire_Of_Devotion
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Expand_Kärnan
+		
+		bypass = {
+
+		}
+		
+		available = {
+			has_completed_focus = CEC_Transcendance
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Expand_Kärnan }
+		
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = spire_of_devotion
+			add_offsite_building = { type = arms_factory level = 5 }
+			}
+		}
+		
+		focus = {
+		id = CEC_Fruits_Of_The_Forest
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -4
+		y = 1
+		relative_position_id = CEC_Moose_Industrilisation
+		
+		available = {
+			has_completed_focus = CEC_Transcendance
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Industrilisation }
+		
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = Fruits_of_the_forest1
+			random_owned_controlled_state = {
+			add_resource = {
+					type = steel
+					amount = 24
+					}
+			add_resource = {
+					type = aluminium
+					amount = 14
+					}
+			add_resource = {
+					type = tungsten
+					amount = 9
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Divine_Exploitation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Fruits_Of_The_Forest
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Fruits_Of_The_Forest }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = Fruits_of_the_forest1
+			add_idea = Fruits_of_the_forest2
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Mobilize_The_Workforce
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_Moose_Industrilisation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Industrilisation }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = Industrialisation
+			}
+		}
+		
+		focus = {
+		id = CEC_Moose_Rearmament
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Mobilize_The_Workforce
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Mobilize_The_Workforce }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Integration_Of_MAAB
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Moose_Rearmament
+		
+		available = {
+			if = {
+				has_tech = motorised_infantry
+				}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Rearmament }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 2500
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Creation_Of_MooseTrafiken
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_SOV_the_road_of_life
+		x = 1
+		y = 1
+		relative_position_id = CEC_Moose_Industrilisation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Industrilisation }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+				if = { #If own Halland
+				limit = {
+					owns_state = 973
+				}
+					
+					939 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { #If own Blekinge
+				limit = {
+					owns_state = 972
+				}
+					
+					938 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = { #If own Småland
+				limit = {
+					owns_state = 939
+				}
+					
+					139 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Expand_MooseTrafiken
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Creation_Of_MooseTrafiken
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Creation_Of_MooseTrafiken }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				}
+		 random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				}
+		 random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				}
+				
+		 random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				}
+		random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Establish_MJ
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Expand_MooseTrafiken
+		
+		available = {
+			CEC = { controls_state = 918 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Expand_MooseTrafiken }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  build_railway = {
+					path = { 6083 6024 11190 9211 } 
+				}
+
+				918 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 9211
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Expand_MJ
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Establish_MJ
+		
+		available = {
+			CEC = { controls_state = 142 }
+			CEC = { controls_state = 916 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Establish_MJ }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  build_railway = {
+					path = { 9127 102 3093 6114 9227 1113 111 3105 202 3191 9148 11053 6023 9051 } 
+				}
+
+				142 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 9127
+						instant_build = yes
+					}
+				}
+				916 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 9148
+						instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Seize_Danish_Factories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 5
+		y = 1
+		relative_position_id = CEC_Moose_Industrilisation
+		
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = CEC_My_Absence_Is_Required
+					}
+				}
+			}
+		
+		available = {
+			has_completed_focus = CEC_Holy_Visions
+			CEC = { controls_state = 99 }
+			CEC = { controls_state = 37 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Moose_Industrilisation }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			99 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			37 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Seize_Swedish_Factories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Seize_Danish_Factories
+		
+		available = {
+			CEC = { controls_state = 141 }
+			CEC = { controls_state = 913 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Seize_Danish_Factories }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  913 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			141 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Seize_Norse_Factories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 2
+		relative_position_id = CEC_Seize_Danish_Factories
+		
+		available = {
+			CEC = { controls_state = 110 }
+			CEC = { controls_state = 143 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Seize_Danish_Factories focus = CEC_Seize_Swedish_Factories}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  110 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			143 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Seize_Finnish_Factories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CEC_Seize_Swedish_Factories
+		
+		available = {
+			CEC = { controls_state = 101 }
+			CEC = { controls_state = 149 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Seize_Swedish_Factories }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  101 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+					}
+				}
+			149 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+	################################################	
+		
+		focus = {
+		id = CEC_Harass_Sweden
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_territory_or_war
+		x = 10
+		y = 0
+		relative_position_id = CEC_Moose_Industrilisation
+		
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = CEC_My_Absence_Is_Required
+					}
+				}
+			}
+			
+		available = {
+			has_completed_focus = CEC_Holy_Visions
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = CEC_Seize_Swedish_Factories }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  SWE = { 
+				country_event = { id = sweden.100 }
+				}
+			mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		focus = {
+		id = CEC_Harass_Sweden_Again
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Harass_Sweden
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Sweden }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  SWE = { 
+				country_event = { id = sweden.101 }
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Harass_Sweden_Further
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Harass_Sweden_Again
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Sweden_Again }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  SWE = { 
+				country_event = { id = sweden.102 }
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Harass_Denmark
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Harass_Sweden_Again
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Sweden_Again }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  DEN = { 
+				country_event = { id = denmark.100 }
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Harass_Denmark_Again
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Harass_Denmark
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Denmark }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  DEN = { 
+				country_event = { id = denmark.101 }
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Harass_Sweden_Even_Further
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_Harass_Sweden_Further
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Sweden_Further }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = monarchy_eliminated
+			}
+		}
+		
+		focus = {
+		id = CEC_Harass_Britain
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Harass_Sweden_Further
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Sweden_Further focus = CEC_Harass_Denmark }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  ENG = { 
+				country_event = { id = britain.89 }
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Shetland_Sect_Expasion
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		icon =  GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = CEC_Harass_Britain
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Harass_Britain }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = shetland_sect_expansion
+		  add_research_slot = 1
+			}
+		}
+		
+		
+		#####################################################
+		
+		
+		
+		focus = {
+		id = CEC_Arm_The_Believers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 2
+		relative_position_id = CEC_Expand_MJ
+		bypass = {
+
+		}
+		cost = 10
+		#prerequisite = { focus = CEC_waking_up }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  set_rule = { can_send_volunteers = yes }
+		  add_ideas = international_believers
+		  army_experience = 20
+		  add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4000
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Recruitment_Drive
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Arm_The_Believers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Arm_The_Believers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = recruitment_drive
+			}
+		}
+		
+		focus = {
+		id = CEC_Train_The_Young
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Recruitment_Drive
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Recruitment_Drive }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = recruitment_drive
+			add_idea = recruitment_drive2
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Desperate_Means
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Train_The_Young
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Train_The_Young }
+		prerequisite = { focus = CEC_Field_Mages }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = deperate_means
+			}
+		}
+		
+		focus = {
+		id = CEC_Reanimate_The_Fallen
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = CEC_Desperate_Means
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Desperate_Means }
+		prerequisite = { focus = CEC_Field_Archmages }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = deperate_means
+			add_idea = deperate_means2
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Undecaying_March
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Reanimate_The_Fallen
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Reanimate_The_Fallen }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = deperate_means2
+			add_idea = deperate_means3
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_No_Rest_For_Wicked
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Reanimate_The_Fallen
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Reanimate_The_Fallen }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = no_rest_for_the_wicked
+			}
+		}
+		
+		focus = {
+		id = CEC_No_Fear
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CEC_Undecaying_March
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_No_Rest_For_Wicked }
+		prerequisite = { focus = CEC_Undecaying_March }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = deperate_means3
+			add_idea = deperate_means4
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Safeguard_Scania
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -4
+		y = 1
+		relative_position_id = CEC_Arm_The_Believers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Arm_The_Believers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = safeguard_scania
+			}
+		}
+		
+		focus = {
+		id = CEC_Begin_The_Crusade
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CEC_Arm_The_Believers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Arm_The_Believers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = unholy_crusaders
+			}
+		}
+		
+		focus = {
+		id = CEC_Cleanse_Unbelievers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = CEC_Begin_The_Crusade
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Begin_The_Crusade }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = unholy_crusaders
+			add_idea = unholy_crusaders2
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Unholy_Crusaders
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Cleanse_Unbelievers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Cleanse_Unbelievers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_corps_commander = { 
+					name = "Fuck this"
+					gfx = GFX_Portrait_romania_barbu_paraianu
+					traits = { infantry_officer }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 5
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			create_corps_commander = { 
+					name = "He's already dead"
+					gfx = GFX_Portrait_romania_barbu_paraianu
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 5
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			create_corps_commander = { 
+					name = "AHHHHH MY FOOT"
+					gfx = GFX_Portrait_romania_barbu_paraianu
+					traits = { infantry_officer }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			}
+		}
+		
+		focus = {
+		id = CEC_Field_Acolytes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CEC_Arm_The_Believers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Arm_The_Believers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = military_magic
+			}
+		}
+		
+		focus = {
+		id = CEC_Field_Mages
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Field_Acolytes
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Field_Acolytes }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = military_magic
+			add_idea = military_magic2
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Field_Archmages
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Field_Mages
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Field_Mages }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = military_magic2
+			add_idea = military_magic3
+			}
+			}
+		}
+		
+		focus = {
+		id = CEC_Combat_Rituals
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Field_Archmages
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Field_Archmages }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = military_rituals
+			}
+		}
+		
+		focus = {
+		id = CEC_Summon_Eldritch_Forces
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CEC_Combat_Rituals
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Combat_Rituals }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = military_rituals
+			add_idea = military_rituals2
+			}
+			}
+		}
+		
+		
+	####################################
+	
+	
+	
+	
+	focus = {
+		id = CEC_Flying_Cuteness
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_build_airforce
+		x = 0
+		y = 3
+		relative_position_id = CEC_Harass_Sweden_Even_Further
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = CEC_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				}
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+	
+	focus = {
+		id = CEC_Blue_Skies
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_doctrine
+		x = -2
+		y = 1
+		relative_position_id = CEC_Flying_Cuteness
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Flying_Cuteness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+		
+	focus = {
+		id = CEC_Sunrise
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = CEC_Blue_Skies
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Blue_Skies }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+		
+		focus = {
+		id = CEC_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_bomber
+		x = 0
+		y = 1
+		relative_position_id = CEC_Flying_Cuteness
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Flying_Cuteness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+			}
+		}
+		
+	focus = {
+		id = CEC_More_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_occupy_start_war
+		x = 0
+		y = 1
+		relative_position_id = CEC_Bombers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Bombers }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.5
+				uses = 1
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+
+			}
+		}
+		
+		focus = {
+		id = CEC_Fighters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter
+		x = 2
+		y = 1
+		relative_position_id = CEC_Flying_Cuteness
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Flying_Cuteness }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+			}
+		}
+		
+	focus = {
+		id = CEC_More_Fighters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+		relative_position_id = CEC_Fighters
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Fighters }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.5
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+
+			}
+		}
+
+	##################################################
+	
+	
+	focus = {
+		id = CEC_Establish_The_CECaii_Fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_build_navy
+		x = 0
+		y = 3
+		relative_position_id = CEC_Flying_Cuteness
+		ai_will_do = {
+			factor = 0
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = CEC_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				}
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+	
+	focus = {
+		id = CEC_Discover_The_Steeringwheel
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+		relative_position_id = CEC_Establish_The_CECaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Establish_The_CECaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+		
+	focus = {
+		id = CEC_Discover_The_Rest_of_The_Ship
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		relative_position_id = CEC_Discover_The_Steeringwheel
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Discover_The_Steeringwheel }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+		
+		focus = {
+		id = CEC_Escorts
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_destroyer
+		x = 0
+		y = 1
+		relative_position_id = CEC_Establish_The_CECaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Establish_The_CECaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = escorts
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+				}
+			}
+		}
+		
+	focus = {
+		id = CEC_Mommy_Ships
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		relative_position_id = CEC_Escorts
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Escorts }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = Mommies
+				bonus = 1.5
+				uses = 1
+				category = cv_tech
+				}
+
+			}
+		}
+		
+		focus = {
+		id = CEC_Ocean_Liners
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_cruiser2
+		x = 2
+		y = 1
+		relative_position_id = CEC_Establish_The_CECaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Establish_The_CECaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = Cruisers
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+				}
+			}
+		}
+		
+	focus = {
+		id = CEC_Thicc_Ships
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		relative_position_id = CEC_Ocean_Liners
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = CEC_Ocean_Liners }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = thicc
+				bonus = 1.5
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+				}
+
+			}
+		}
+	
+	
+ }
+
+	

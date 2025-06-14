@@ -1,0 +1,1335 @@
+ideas = {
+	country = {
+	
+	
+	kawaiist_influence = {
+			picture = reclusive_society
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				kawaiism_drift = 0.2
+				
+			}
+		}
+	
+	
+		reclusive_society = {
+			picture = reclusive_society
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.15
+				political_power_factor = -0.25
+				global_building_slots_factor = -0.5
+				monthly_population = -0.20
+				
+			}
+		}
+		
+		reclusive_society2 = {
+			picture = reclusive_society
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				drift_defence_factor = 0.2
+				war_support_factor = -0.05
+				political_power_factor = -0.1
+				global_building_slots_factor = -0.25
+				
+			}
+		}
+		
+		reclusive_society3 = {
+			picture = reclusive_society3
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				drift_defence_factor = 0.2
+				political_power_factor = 0.1
+				monthly_population = 0.1
+			}
+		}
+		
+		weak_industry1 = {
+			picture = weak_industry1
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				
+			}
+		}
+		
+		weak_industry2 = {
+			picture = weak_industry2
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				
+			}
+		}
+		
+		weak_industry3 = {
+			picture = weak_industry3
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.3
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				consumer_goods_factor = -0.25
+				
+			}
+		}
+		
+		engineering_corps = {
+			picture = land_of_love
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				
+			}
+		}
+		
+		land_of_love = {
+			picture = land_of_love
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				monthly_population = 0.2
+				weekly_manpower = 500
+				
+			}
+		}
+		
+		
+		
+		e_girl1 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = 0.15
+				
+			}
+		}
+		
+		e_girl2 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				monthly_population = 0.3
+				
+			}
+		}
+		
+		e_girl3 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				monthly_population = 0.4
+				weekly_manpower = 500
+			}
+		}
+		
+		e_girl4 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				monthly_population = 0.6
+				weekly_manpower = 1500
+			}
+		}
+		
+		
+		neko_worship = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				compliance_growth_on_our_occupied_states = -0.15
+				resistance_growth_on_our_occupied_states = 0.15
+				
+			}
+		}
+		
+		neko_worship2 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.25
+				production_factory_efficiency_gain_factor = 0.2
+				compliance_growth_on_our_occupied_states = -0.2
+				resistance_growth_on_our_occupied_states = 0.2
+				
+			}
+		}
+		
+		kawaii_brigades = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.3
+				breakthrough_factor = 0.3
+				
+			}
+		}
+		
+		nursing_corps = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.3
+				army_org_factor = 0.1
+				army_org_regain = 0.2
+			}
+		}
+		
+		battle_planning = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.2
+				max_planning_factor = 0.2
+				land_doctrine_cost_factor = -0.15
+			}
+		}
+		
+		kawaii_involvement = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.40
+				join_faction_tension = -0.40
+				send_volunteers_tension = -0.50
+				send_volunteer_divisions_required = -1
+				lend_lease_tension = -0.5
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		traditionalist_superiority = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		traditionalist_superiority2 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				
+			}
+		}
+		
+		reformist_superiority = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				
+			}
+		}
+		
+		reformist_superiority2 = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				
+			}
+		}
+		
+		
+		choke_them = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.2
+				
+			}
+		}
+		
+		choke_them2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.25
+				land_night_attack = 0.5
+			}
+		}
+		
+		kawaii_uniforms = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		
+		promote_education = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		gender_inclusivity = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				female_random_country_leader_chance = 0.5
+				female_random_army_leader_chance = 0.5
+				female_random_admiral_chance = 0.5
+				
+			}
+		}
+		
+		fashion_industry = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		
+		fashion_industry_chokers = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.15
+				breakthrough_factor = 0.10
+			}
+		}
+		
+		fashion_industry_chokers_stockings = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.2
+				breakthrough_factor = 0.10
+				army_attack_factor = 0.15
+			}
+		}
+		
+		fashion_industry_chokers_thigh_high = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.05
+				breakthrough_factor = 0.10
+				army_speed_factor = 0.15
+			}
+		}
+		
+		fashion_industry_scrunchies = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				army_defence_factor = 0.1
+			}
+		}
+		
+		fashion_industry_scrunchies_stockings = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				army_defence_factor = 0.1
+				army_attack_factor = 0.15
+			}
+		}
+		
+		fashion_industry_scrunchies_thigh_high = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.2
+				army_defence_factor = 0.1
+				army_speed_factor = 0.15
+			}
+		}
+		
+		
+		kawaii_bun_bakery = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		
+		console_usage = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+		
+		
+		
+	royal_palace1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.5
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.15
+			}
+		}
+		
+		royal_palace2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.5
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.5
+				army_org_factor = 0.2
+			}
+		}
+		
+		royal_palace3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.5
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.15
+				terrain_penalty_reduction = 0.25
+				army_org_factor = 0.3
+				pocket_penalty = -0.25
+				production_lack_of_resource_penalty_factor = -0.5
+				global_building_slots_factor = 0.25
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		they_will_suffer = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.75
+				army_attack_factor = 0.1
+				army_org_factor = 0.15
+			}
+		}
+		
+		
+		everyone_a_servant = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+		
+		dark_temple = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.20
+				required_garrison_factor = -0.25
+				compliance_growth = 0.3
+				resistance_growth = -0.3
+				resistance_decay = 0.3
+			}
+		}
+		
+		our_time = {
+			picture = neko_worship
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.75
+				supply_consumption_factor = -0.25
+			}
+		}
+		
+		KAW_boosting_traditionalists = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+	}
+	
+	
+		KAW_boosting_reformists = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		
+	}
+	
+}
+
+

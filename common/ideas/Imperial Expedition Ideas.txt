@@ -1,0 +1,393 @@
+ideas = {
+	country = {
+	
+	mandatory_sixpacks = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.10
+				breakthrough_factor = 0.15
+				training_time_factor = -0.2
+			}
+		}
+		
+	military_focus = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.4
+				offensive_war_stability_factor = 0.3
+				command_power_gain = 1
+				terrain_penalty_reduction = 0.35
+				weekly_manpower = 1500
+				training_time_factor = -0.75
+				army_attack_factor = 0.20
+				breakthrough_factor = 0.2
+			}
+		}
+		
+	unindustrialised_land = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.3
+				production_factory_max_efficiency_factor = -0.3 
+				production_speed_buildings_factor = -0.2 
+			}
+		}
+	unindustrialised_land2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15 
+			}
+		}
+		
+	slightly_industrialised_land = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1 
+			}
+		}
+		
+	disorganised_army = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.3
+				army_org_regain = -0.3
+				dig_in_speed_factor = -0.2
+				max_planning_factor = -0.5		
+				training_time_factor = 0.3
+			}
+		}
+		
+	disorganised_army2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+		
+	organised_army = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+				terrain_penalty_reduction = 0.05
+			}
+		}
+		
+	glory_awaits = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.2
+				conscription = 0.02
+				war_support_factor = 0.15
+			}
+		}
+		
+	glory_awaits2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.15
+				conscription = 0.02
+				war_support_factor = 0.4
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+	lack_of_patriotism = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.5
+				conscription = -0.01
+			}
+		}
+		
+	mass_produced_drones = {
+			allowed = {
+				tag = IEF
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+
+
+		}
+	death_from_above = {
+	
+			allowed = {
+				tag = IEF
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				medium_plane_airframe = {
+					air_ground_attack = 0.2
+					instant = yes
+				}
+				small_plane_cas_airframe = {
+					air_ground_attack = 0.2
+					instant = yes
+				}
+			}
+		}
+		
+	encourage_arms_production = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+	cut_civilian_investments = {
+			picture = unknown
+			
+			allowed = {
+				tag = IEF
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+			}
+		}
+		
+	}
+	
+}
+
+

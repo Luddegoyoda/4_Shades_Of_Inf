@@ -1,0 +1,385 @@
+characters = {
+	DRC_Chiko = {
+		name = DRC_Chiko
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_drc_chiko_large"
+				small=  "GFX_portrait_drc_chiko_small"
+			}
+		}
+		country_leader = {
+			ideology = nazism 
+			#traits={ athletic }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = KAW_Luddego
+		#	allowed  = {
+		#		original_tag  = KAW
+		#	}
+		#	cost = 50
+		#	available  = {
+		#
+		#	}
+		#	traits  = {
+		#		master_of_statecraft 
+		#	}
+		#	#do_effect  = {}
+		#			
+		#			
+		#	ai_will_do  = {
+		#		factor  = 1.0
+		#	}
+		#}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	
+	DRC_Musmatta = {
+		name = DRC_Musmatta
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_drc_musmatta_large"
+				small=  "GFX_portrait_drc_musmatta_small"
+			}
+		}
+		corps_commander = {
+			traits={ reckless, commando, harsh_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	DRC_Kenobi = {
+		name = DRC_Kenobi
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_drc_kenobi_large"
+				small=  "GFX_portrait_drc_kenobi_small"
+			}
+		}
+		corps_commander = {
+			traits={ }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
+	
+	DRC_Aiko = {
+		name = DRC_Aiko
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DRC_Aiko
+			allowed  = {
+				original_tag  = DRC
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				captain_of_industry
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	DRC_Emi = {
+		name = DRC_Emi
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DRC_Emi
+			allowed  = {
+				original_tag  = DRC
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				technocrat
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	DRC_Tomiko = {
+		name = DRC_Tomiko
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DRC_Tomiko
+			allowed  = {
+				original_tag  = DRC
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				war_industrialist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	DRC_Suzuki = {
+		name = DRC_Suzuki
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DRC_Suzuki
+			allowed  = {
+				original_tag  = DRC
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				silent_workhorse
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	##################################################
+	
+	DRC_Yasu = {
+		name = DRC_Yasu
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = DRC_Yasu
+			allowed  = {
+				original_tag  = DRC
+			}
+			cost = 100
+			available  = {
+		
+			}
+			traits  = {
+				military_theorist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	####################################
+	
+	DRC_Takara = {
+		name= DRC_Takara
+		portraits={
+			army={
+				small="GFX_idea_john_vereker"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = DRC_Takara
+			allowed = {
+				original_tag = DRC
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	DRC_Shinobu = {
+		name = DRC_Shinobu
+		portraits={
+			army={
+				small="GFX_idea_henry_arnold"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = DRC_Shinobu
+			allowed = {
+				original_tag = DRC
+			}
+			traits = {
+				air_chief_reform_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+	DRC_Sora = {
+		name = DRC_Sora
+		portraits = {
+			army={
+				small="GFX_idea_dudley_pound"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = DRC_Sora
+			allowed = {
+				original_tag = DRC
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	DRC_Riko = {
+		name=DRC_Riko
+		portraits = {
+			army={
+				small="GFX_idea_kenneth_anderson"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = DRC_Riko
+			ledger = army
+			allowed = {
+				original_tag = DRC
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	DRC_Miyako = {
+		name = DRC_Miyako
+		portraits={
+			army={
+				small="GFX_idea_sholto_douglas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = DRC_Miyako
+			ledger = air
+			allowed = {
+				original_tag = DRC
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	DRC_Nanami = {
+		name=DRC_Nanami
+		portraits={
+			army={
+				small="GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = DRC_Nanami
+			ledger = army
+			available = {
+			}
+			allowed = {
+				original_tag = DRC
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,1238 @@
+ideas = {
+	country = {
+	
+		increased_wildlife_collisions = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.3
+				mobilization_speed  = -0.3
+			}
+		}
+	
+		Industrialisation = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05 
+				
+			}
+		}
+		
+		
+		Fruits_of_the_forest1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				
+			}
+		}
+		
+		Fruits_of_the_forest2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.4
+				base_fuel_gain_factor = 0.2
+				
+			}
+		}
+		
+		sect_rituals = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				
+			}
+		}
+		
+		sect_rituals2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				
+			}
+		}
+		
+		sect_rituals3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				war_support_factor = 0.20
+				neutrality_drift = 0.2
+				
+			}
+		}
+		
+		sect_rituals4 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				war_support_factor = 0.40
+				neutrality_drift = 0.3
+				
+			}
+		}
+		
+		sect_rituals5 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				war_support_factor = 0.40
+				neutrality_drift = 0.3
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+		
+		sect_rituals6 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				war_support_factor = 0.40
+				neutrality_drift = 0.3
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.2
+			}
+		}
+		
+		sect_rituals7 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				war_support_factor = 0.40
+				neutrality_drift = 0.3
+				production_speed_buildings_factor = 0.50
+				research_speed_factor = 0.4
+			}
+		}
+		
+		transcendance = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				weekly_manpower = 500
+				war_support_factor = 0.75
+				neutrality_drift = 0.3
+				production_speed_buildings_factor = 0.50
+				research_speed_factor = 0.4
+				conscription = 0.05
+				recruitable_population_factor = 0.1
+				army_morale_factor = 0.2
+				army_attack_factor = 0.2
+				breakthrough_factor = 0.2
+			}
+		}
+		
+		devotees1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.3
+				weekly_manpower = 600
+			}
+		}
+		
+		devotees2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.3
+				weekly_manpower = 1600
+			}
+		}
+		
+		devotees3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				attrition = -0.3
+				training_time_factor = -0.2
+				weekly_manpower = 3000
+				production_factory_max_efficiency_factor = 0.3
+			}
+		}
+		
+		
+		devotion_is_power1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				conscription = 0.03
+			}
+		}
+		
+		devotion_is_power2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				conscription = 0.05
+				recruitable_population_factor = 0.05
+			}
+		}
+		
+		united_faith1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.2
+				drift_defence_factor = 0.5
+			}
+		}
+		
+		united_faith2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.2
+				drift_defence_factor = 0.5
+				compliance_growth = 0.1
+				resistance_growth = -0.25
+			}
+		}
+		
+		united_faith3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.2
+				drift_defence_factor = 0.5
+				compliance_growth = 0.15
+				resistance_growth = -0.35
+			}
+		}
+		
+		
+		shetland_sect_expansion = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		monarchy_eliminated = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		scanian_emissaries = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_factor = 0.2
+			}
+		}
+		
+		scanian_emissaries2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_factor = 0.6
+				ai_badass_factor = 0.4
+			}
+		}
+		
+		greasing_adolf = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		
+		recruitment_drive = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 100
+				war_support_weekly_factor = 0.001
+			}
+		}
+		
+		recruitment_drive2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 100
+				war_support_weekly_factor = 0.001
+				conscription = 0.01
+			}
+		}
+		
+		military_magic = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor = 0.1
+				max_dig_in_factor = 0.1
+			}
+		}
+		
+		military_magic2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor = 0.2
+				max_dig_in_factor = 0.2
+			}
+		}
+		
+		military_magic3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor = 0.4
+				max_dig_in_factor = 0.5
+			}
+		}
+		
+		military_rituals = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.2
+				army_speed_factor = 0.1
+			}
+		}
+		
+		military_rituals2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				army_attack_factor = 0.2
+				army_speed_factor = 0.1
+				air_mission_efficiency = 0.2
+			}
+		}
+		
+		deperate_means = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.2
+			}
+		}
+		
+		deperate_means2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.3
+				org_loss_at_low_org_factor = -0.25
+			}
+		}
+		
+		deperate_means3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.3
+				org_loss_at_low_org_factor = -0.25
+				org_loss_when_moving = -0.3
+				terrain_penalty_reduction = 0.15
+			}
+		}
+		
+		deperate_means4 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.3
+				org_loss_at_low_org_factor = -0.25
+				org_loss_when_moving = -0.3
+				terrain_penalty_reduction = 0.15
+				army_morale_factor = 0.4
+				
+			}
+		}
+		
+		no_rest_for_the_wicked = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				land_night_attack = 0.1
+				army_org_factor = 0.2
+			}
+		}
+		
+		
+		
+		
+				
+		
+		unholy_crusaders = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.1
+			}
+		}
+		
+		unholy_crusaders2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.2
+			}
+		}
+		
+		safeguard_scania = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.3
+			}
+		}
+		
+		i_am_speed = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.2
+			}
+		}
+		
+		spire_of_devotion = {
+			picture = unknown
+			
+			allowed = {
+				tag = CEC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				winter_attrition_factor = -0.4
+				decryption_factor = 0.25
+			}
+		}
+		
+		international_believers = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteers_tension = -0.50
+				send_volunteer_divisions_required = -1
+			}
+		}
+		
+		authentic_taco_recipie = {
+			picture = unknown
+			
+			allowed = {
+				tag = KAW
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.3
+			}
+		}
+		
+	}
+}

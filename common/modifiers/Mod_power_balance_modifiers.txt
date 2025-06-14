@@ -1,0 +1,12 @@
+#########################################
+###### KAW BOP MODS ######
+#########################################
+
+KAW_reformist_push = {
+	power_balance_daily = 0.001
+}
+
+KAW_traditionalist_push = {
+	power_balance_daily = -0.001
+}
+

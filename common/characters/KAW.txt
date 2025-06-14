@@ -1,0 +1,427 @@
+characters = {
+	KAW_Sakura = {
+		name = KAW_Sakura
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_kaw_sakura_large"
+				small=  "GFX_portrait_kaw_sakura_small"
+			}
+		}
+		country_leader = {
+			ideology=uwu
+			#traits={ athletic }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = KAW_Luddego
+		#	allowed  = {
+		#		original_tag  = KAW
+		#	}
+		#	cost = 50
+		#	available  = {
+		#
+		#	}
+		#	traits  = {
+		#		master_of_statecraft 
+		#	}
+		#	#do_effect  = {}
+		#			
+		#			
+		#	ai_will_do  = {
+		#		factor  = 1.0
+		#	}
+		#}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	KAW_Kinsi = {
+		name = KAW_Kinsi
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_kaw_kinsi_large"
+				small=  "GFX_portrait_kaw_kinsi_small"
+			}
+		}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	KAW_Monika = {
+		name = KAW_Monika
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_kaw_monika_large"
+				small=  "GFX_portrait_kaw_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KAW_Monika
+			allowed  = {
+				original_tag  = KAW
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				literature_minister 
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+		corps_commander = {
+			traits={ brilliant_strategist }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=0
+		}
+	}
+	
+	KAW_Yora = {
+		name = KAW_Yora
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_kaw_yora_large"
+				small=  "GFX_portrait_kaw_yora_small"
+			}
+		}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
+	
+	
+	KAW_Aiko = {
+		name = KAW_Aiko
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_kaw_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KAW_Aiko
+			allowed  = {
+				original_tag  = KAW
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				captain_of_industry
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	KAW_Emi = {
+		name = KAW_Emi
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_kaw_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KAW_Emi
+			allowed  = {
+				original_tag  = KAW
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				technocrat
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	KAW_Tomiko = {
+		name = KAW_Tomiko
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_kaw_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KAW_Tomiko
+			allowed  = {
+				original_tag  = KAW
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				war_industrialist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	KAW_Suzuki = {
+		name = KAW_Suzuki
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_kaw_monika_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KAW_Suzuki
+			allowed  = {
+				original_tag  = KAW
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				silent_workhorse
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	##################################################
+	
+	KAW_Yasu = {
+		name = KAW_Yasu
+		portraits = {
+			civilian = {
+				small=  "GFX_portrait_kaw_monika_small"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = KAW_Yasu
+			allowed  = {
+				original_tag  = KAW
+			}
+			cost = 100
+			available  = {
+		
+			}
+			traits  = {
+				military_theorist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	####################################
+	
+	KAW_Takara = {
+		name= KAW_Takara
+		portraits={
+			army={
+				small="GFX_idea_john_vereker"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = KAW_Takara
+			allowed = {
+				original_tag = KAW
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	KAW_Shinobu = {
+		name = KAW_Shinobu
+		portraits={
+			army={
+				small="GFX_idea_henry_arnold"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = KAW_Shinobu
+			allowed = {
+				original_tag = KAW
+			}
+			traits = {
+				air_chief_reform_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+	KAW_Sora = {
+		name = KAW_Sora
+		portraits = {
+			army={
+				small="GFX_idea_dudley_pound"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = KAW_Sora
+			allowed = {
+				original_tag = KAW
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	KAW_Riko = {
+		name=KAW_Riko
+		portraits = {
+			army={
+				small="GFX_idea_kenneth_anderson"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KAW_Riko
+			ledger = army
+			allowed = {
+				original_tag = KAW
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	KAW_Miyako = {
+		name = KAW_Miyako
+		portraits={
+			army={
+				small="GFX_idea_sholto_douglas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = KAW_Miyako
+			ledger = air
+			allowed = {
+				original_tag = KAW
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	KAW_Nanami = {
+		name=KAW_Nanami
+		portraits={
+			army={
+				small="GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = KAW_Nanami
+			ledger = army
+			available = {
+			}
+			allowed = {
+				original_tag = KAW
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,419 @@
+characters = {
+	ADO_Skipper = {
+		name = ADO_Skipper
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_ado_skipper_large"
+				small=  "GFX_portrait_ado_skipper_small"
+			}
+		}
+		country_leader = {
+			ideology = nazism 
+			#traits={ athletic }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	
+	ADO_Rico = {
+		name = ADO_Rico
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_ado_skipper_large"
+				small=  "GFX_portrait_ado_skipper_small"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = ADO_Rico
+			ledger = army
+			available = {
+			}
+			available  = {
+				has_completed_focus = ADO_Yes_Rico_Kaboom
+			}
+			traits = {
+				kaboomer
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+		corps_commander = {
+			traits={ reckless }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	ADO_Kowalski = {
+		name = ADO_Kowalski
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_ado_skipper_large"
+				small=  "GFX_portrait_ado_skipper_small"
+			}
+		}
+		advisor={	
+			slot = political_advisor
+			idea_token = ADO_Kowalski
+			available = {
+			}
+			available  = {
+				has_completed_focus = ADO_Kowalski_Status_Report
+			}
+			traits = {
+				analyst
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+		corps_commander = {
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=0
+		}
+	}
+	
+	ADO_Private = {
+		name = ADO_Private
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_ado_skipper_large"
+				small=  "GFX_portrait_ado_skipper_small"
+			}
+		}
+		corps_commander = {
+			traits={ }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=0
+		}
+	}
+	
+
+	
+	ADO_Aiko = {
+		name = ADO_Aiko
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADO_Aiko
+			allowed  = {
+				original_tag  = ADO
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				captain_of_industry
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	ADO_Emi = {
+		name = ADO_Emi
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADO_Emi
+			allowed  = {
+				original_tag  = ADO
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				technocrat
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	ADO_Tomiko = {
+		name = ADO_Tomiko
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADO_Tomiko
+			allowed  = {
+				original_tag  = ADO
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				war_industrialist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	ADO_Suzuki = {
+		name = ADO_Suzuki
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ADO_Suzuki
+			allowed  = {
+				original_tag  = ADO
+			}
+			cost = 150
+			available  = {
+		
+			}
+			traits  = {
+				silent_workhorse
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	##################################################
+	
+	ADO_Yasu = {
+		name = ADO_Yasu
+		portraits = {
+			civilian = {
+				small=  "GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ADO_Yasu
+			allowed  = {
+				original_tag  = ADO
+			}
+			cost = 100
+			available  = {
+		
+			}
+			traits  = {
+				military_theorist
+			}
+			#do_effect  = {}
+					
+					
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	####################################
+	
+	ADO_Takara = {
+		name= ADO_Takara
+		portraits={
+			army={
+				small="GFX_idea_john_vereker"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ADO_Takara
+			allowed = {
+				original_tag = ADO
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	ADO_Shinobu = {
+		name = ADO_Shinobu
+		portraits={
+			army={
+				small="GFX_idea_henry_arnold"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ADO_Shinobu
+			allowed = {
+				original_tag = ADO
+			}
+			traits = {
+				air_chief_reform_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+	ADO_Sora = {
+		name = ADO_Sora
+		portraits = {
+			army={
+				small="GFX_idea_dudley_pound"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ADO_Sora
+			allowed = {
+				original_tag = ADO
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	ADO_Riko = {
+		name=ADO_Riko
+		portraits = {
+			army={
+				small="GFX_idea_kenneth_anderson"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ADO_Riko
+			ledger = army
+			allowed = {
+				original_tag = ADO
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
+	}
+	
+	ADO_Miyako = {
+		name = ADO_Miyako
+		portraits={
+			army={
+				small="GFX_idea_sholto_douglas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ADO_Miyako
+			ledger = air
+			allowed = {
+				original_tag = ADO
+			}
+			traits = {
+				air_air_superiority_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	ADO_Nanami = {
+		name=ADO_Nanami
+		portraits={
+			army={
+				small="GFX_idea_ENG_david_stirling"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = ADO_Nanami
+			ledger = army
+			available = {
+			}
+			allowed = {
+				original_tag = AND
+			}
+			traits = {
+				army_commando_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0.200
+			}
+		}
+	}
+	
+}

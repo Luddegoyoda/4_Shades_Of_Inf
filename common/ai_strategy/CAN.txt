@@ -1,0 +1,95 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+########################
+
+CAN_dont_join_allies = {
+	allowed = { original_tag = CAN }
+	enable = {
+		CEC = { has_completed_focus = CEC_My_Absence_Is_Required }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = "ENG"
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "USA"
+		value = -1000
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "CAN"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "AST"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SAF"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "ICE"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "NZL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "HOL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "LUX"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "BEL"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "NOR"
+		value = -1000
+	}
+	
+	
+}

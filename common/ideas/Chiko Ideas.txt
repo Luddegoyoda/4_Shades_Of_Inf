@@ -1,0 +1,723 @@
+ideas = {
+	country = {
+	
+	
+	gulf_blockaded = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = 2.5
+				
+			}
+		}
+		
+	fuel_shortages = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fuel_gain_factor = -60
+				
+			}
+		}
+		
+		insulted = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -3
+				
+			}
+		}
+		
+		rabbitborne_troops = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				extra_paratrooper_supply_grace = 72
+				paradrop_organization_factor = 0.2
+				
+			}
+		}
+		
+		state_information_monopoly = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.2
+				
+			}
+		}
+		
+		chico_mandate1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				
+			}
+		}
+		
+		chico_mandate2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				monthly_population = 1.0
+				
+			}
+		}
+		
+		chico_mandate3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				monthly_population = 1.0
+				weekly_manpower = 7500
+				
+			}
+		}
+		
+		chico_mandate4= {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				monthly_population = 1.5
+				weekly_manpower = 1000
+				
+			}
+		}
+		
+		
+		british_payments = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.60
+			}
+		}
+		
+		more_soldiers = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 250
+				conscription = 0.02
+			}
+		}
+		
+		liberated_rabbits = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				conscription = 0.02
+			}
+		}
+		
+		military_discipline = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		
+	military_discipline2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_morale_factor = 0.2
+				army_defence_factor = 0.05
+			}
+		}
+	
+	rabbits_resistance = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				compliance_growth_on_our_occupied_states = -0.3
+				resistance_growth_on_our_occupied_states = 0.3
+			}
+		}
+		
+		ancient_scrolls = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.2 
+			}
+		}
+		
+	burned_jajjada = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15				
+			}
+		}
+		
+		
+		
+		opium_to_leaders = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.2
+				
+			}
+		}
+		
+		opium_to_army = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+		
+		worsened_work_conditions1 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.1
+				
+			}
+		}
+		
+		worsened_work_conditions2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+		worsened_work_conditions3 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.20
+			}
+		}
+		
+		no_health_benefits = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.3
+			}
+		}
+		
+		army_funding = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			}
+		
+		army_funding2 = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		
+		
+	temp_fix_enjoy = {
+			picture = unknown
+			
+			allowed = {
+				tag = DRC
+			}
+			
+			available = {
+			
+			}
+			
+			cancel = {
+			
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				join_faction_tension = -0.40
+				send_volunteers_tension = -0.50
+				send_volunteer_divisions_required = -0.5
+				lend_lease_tension = -0.5
+			}
+		}
+		
+		
+	}
+}
+
+

@@ -1,0 +1,58 @@
+characters = {
+	PPE_Puff = {
+		name = PPE_Puff
+		portraits = {
+			civilian = {
+				large= "GFX_portrait_ppe_puff_large"
+				small=  "GFX_portrait_ppe_puff_small"
+			}
+		}
+		country_leader = {
+			ideology=fascism_ideology
+			#traits={ athletic }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader = {
+			ideology=despotism
+			#traits={ athletic }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader = {
+			ideology=conservatism 
+			#traits={ athletic }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = KAW_Luddego
+		#	allowed  = {
+		#		original_tag  = KAW
+		#	}
+		#	cost = 50
+		#	available  = {
+		#
+		#	}
+		#	traits  = {
+		#		master_of_statecraft 
+		#	}
+		#	#do_effect  = {}
+		#			
+		#			
+		#	ai_will_do  = {
+		#		factor  = 1.0
+		#	}
+		#}
+		corps_commander = {
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+}

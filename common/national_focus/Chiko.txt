@@ -1,0 +1,2997 @@
+focus_tree = {
+    id = chiko_focus
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = DRC
+        }
+    }
+	
+	default = no
+	
+	continuous_focus_position = { x = 150 y = 2300 }
+	
+	focus = {
+		id = DRC_suppress_the_people
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 16
+		y = 0
+		#relative_position_id = DRC_
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = DRC_ }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_stability = -0.05
+		  add_tech_bonus = {
+				name = DRC_suppress_the_people
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = support_tech
+				}
+		  
+
+			
+		 hidden_effect = {
+		 news_event = chico_news.1
+		 set_rule = { can_send_volunteers = yes }
+		 set_rule = { can_create_factions = yes }
+		 set_rule = { can_declare_war_on_same_ideology = yes }
+		 set_rule = { can_puppet = yes }
+		 add_ideas = temp_fix_enjoy
+		 }
+		  
+			}
+		}
+		
+		
+		
+		
+		
+	focus = {
+		id = DRC_Middle_Eastern_Empire
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = -8
+		y = 1
+		relative_position_id = DRC_suppress_the_people
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = DRC_Prohibition_Of_Rabbit_Meat
+					}
+				}
+			}
+		bypass = {
+
+		}
+		cost = 5
+		mutually_exclusive = {focus = DRC_Prohibition_Of_Rabbit_Meat}
+		prerequisite = { focus = DRC_suppress_the_people }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			transfer_state = 455
+			transfer_state = 453
+			add_state_core = 453
+			add_state_core = 455
+			}
+		}	
+		
+		
+	focus = {
+		id = DRC_Suez_Agreement
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Middle_Eastern_Empire
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Middle_Eastern_Empire }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 446
+			add_state_core = 446
+			}
+		}
+		
+	focus = {
+		id = DRC_Free_Yemen
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Suez_Agreement
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Suez_Agreement }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			YEM = {
+				transfer_state = 659
+			}
+			
+			}
+		}
+		
+	focus = {
+		id = DRC_Aquire_Kuwait
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Suez_Agreement
+		ai_will_do = {
+			factor = 5
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Suez_Agreement }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 656
+			add_state_core = 656
+			}
+		}
+		
+	focus = {
+		id = DRC_Demand_Gulf_Territories
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Aquire_Kuwait
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Aquire_Kuwait }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			658 = { 
+					controller = {
+						country_event = { id = chiko.2 }
+					}
+				}
+			
+			}
+		}
+		
+		
+		
+	focus = {
+		id = DRC_Blockade_The_Gulf
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Aquire_Kuwait
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Aquire_Kuwait }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  IRQ = {
+			add_ideas = gulf_blockaded
+		  }
+			}
+		}
+		
+	focus = {
+		id = DRC_Claims_On_Iraq
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Blockade_The_Gulf
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Blockade_The_Gulf }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = IRQ }
+			}
+		}
+		
+		focus = {
+		id = DRC_Blockade_The_Gulf_Further
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Claims_On_Iraq
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Claims_On_Iraq}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  PER = {
+			add_ideas = gulf_blockaded
+		  }
+			}
+		}
+		
+	focus = {
+		id = DRC_Claims_On_Iran
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Blockade_The_Gulf_Further
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Blockade_The_Gulf_Further }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = PER }
+			}
+		}
+		
+	focus = {
+		id = DRC_Destroy_Sugar_Daddies
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Claims_On_Iran
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Claims_On_Iran }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = IEF }
+			}
+		}
+	
+	
+	##################################
+	
+	focus = {
+		id = DRC_Lebanon_Deal
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_Middle_Eastern_Empire
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Middle_Eastern_Empire}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 553 
+			add_state_core = 553
+			FRA = {
+			release = SYR
+			}
+			}
+		}
+		
+	focus = {
+		id = DRC_Annex_Cyprus
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_Lebanon_Deal
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Lebanon_Deal }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 183 
+		  add_state_core = 183	
+			}
+		}
+		
+		
+	focus = {
+		id = DRC_Claim_Syria
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Lebanon_Deal
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Lebanon_Deal }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = SYR }
+			}
+		}
+		
+	focus = {
+		id = DRC_Destabilize_Turkey
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = DRC_Claim_Syria
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Claim_Syria }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  TUR = {
+			add_ideas = fuel_shortages
+		  }
+			}
+		}
+		
+	focus = {
+		id = DRC_Turkish_Claims
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Destabilize_Turkey
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Destabilize_Turkey }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = TUR }
+			}
+		}
+		
+		focus = {
+		id = DRC_Caucasus_Incident
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Turkish_Claims
+		
+		available = {
+		DRC = { controls_state = 354 }
+		DRC = { controls_state = 49 }	
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Turkish_Claims }
+		prerequisite = { focus = DRC_Claims_On_Iran }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		declare_war_on = { type = annex_everything    target = SOV }
+		  transfer_state = 230 
+		  transfer_state = 229
+		  transfer_state = 231
+		  transfer_state = 826 
+		  add_state_core = 230		  
+		  add_state_core = 229
+		  add_state_core = 231
+		  add_state_core = 826
+			}
+		}
+		
+		focus = {
+		id = DRC_Caucasian_Wall
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Caucasus_Incident
+		bypass = {
+
+		}
+		cost = 2
+		prerequisite = { focus = DRC_Caucasus_Incident }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  826 = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = {
+								id = 11647
+								id = 11617
+								id = 672
+							}
+							instant_build = yes
+						}
+					}
+			231 = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = {
+								id = 654
+								id = 9626
+								id = 1530
+								id = 4534
+								id = 6436
+							}
+							instant_build = yes
+						}
+					}
+			229 = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = {
+								id = 6763
+								id = 11645
+								id = 4545
+								id = 4458
+							}
+							instant_build = yes
+						}
+					}
+			}
+		}
+		
+		
+		
+	
+	
+	####################
+	
+	focus = {
+		id = DRC_Annex_Crete
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Annex_Cyprus
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Annex_Cyprus }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  	transfer_state = 182 
+			add_state_core = 182
+			}
+		}
+		
+	focus = {
+		id = DRC_Annex_Rhodes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_Annex_Cyprus
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Annex_Cyprus  }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 164 
+			add_state_core = 164
+		  	
+			}
+		}
+		
+	focus = {
+		id = DRC_Destabilize_Greece
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Annex_Crete
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Annex_Crete }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  GRE = {
+			add_ideas = gulf_blockaded
+		  }
+			}
+		}
+		
+	focus = {
+		id = DRC_Greek_Claims
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Destabilize_Greece
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Destabilize_Greece }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = GRE }
+			}
+		}
+	
+	
+		
+		################################################
+		
+		
+		
+		
+		
+		
+		focus = {
+		id = DRC_Prohibition_Of_Rabbit_Meat
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_suppress_the_people
+		allow_branch = {
+			if = {
+				NOT = {
+					has_completed_focus = DRC_Middle_Eastern_Empire
+					}
+				}
+			}
+		bypass = {
+
+		}
+		cost = 5
+		mutually_exclusive = {focus = DRC_Middle_Eastern_Empire}
+		prerequisite = { focus = DRC_suppress_the_people }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = chico_mandate1
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				}
+				hidden_effect = {
+			news_event = chico_news.2
+			}
+		 mark_focus_tree_layout_dirty = yes
+			}
+		}
+		
+		focus = {
+		id = DRC_Request_International_Aid
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Prohibition_Of_Rabbit_Meat
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Prohibition_Of_Rabbit_Meat }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				country_event = { id = chiko.1 }
+
+			}
+			}
+		}
+		
+		focus = {
+		id = DRC_Swedish_Tank_Bunny
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		relative_position_id = DRC_Request_International_Aid
+		
+		available = {
+			has_opinion = {
+			target = SWE
+			value > 49
+		}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Request_International_Aid }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+						name = armor_bonus
+						bonus = 2.5
+						uses = 3
+						category = armor
+					}
+			}
+		}
+		
+		focus = {
+		id = DRC_Egyptian_Liberation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Prohibition_Of_Rabbit_Meat
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = DRC_Prohibition_Of_Rabbit_Meat }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_timed_idea = {
+				idea = british_payments
+				days = 75
+				}
+		  ENG = {
+			release = EGY
+			release = JOR
+			}
+		  
+			}
+		}
+		
+		focus = {
+		id = DRC_Algerian_Outrage
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Egyptian_Liberation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Egyptian_Liberation }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 459 
+		  transfer_state = 460
+		  transfer_state = 513
+		  add_state_core = 459		  
+		  add_state_core = 460
+		  add_state_core = 513
+			}
+		}
+		
+		
+		focus = {
+		id = DRC_Spanish_Compensation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Algerian_Outrage
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		bypass = {
+
+		}
+		cost = 10
+		prerequisite = { focus = DRC_Algerian_Outrage }
+		mutually_exclusive = { focus = DRC_Canejo_Intervention }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 169
+		  transfer_state = 173
+		  transfer_state = 168
+		  transfer_state = 167
+		  transfer_state = 165
+		  transfer_state = 177
+		  add_state_core = 169		  
+		  add_state_core = 173
+		  add_state_core = 168
+		  add_state_core = 167
+		  add_state_core = 165
+		  add_state_core = 177
+			}
+		}
+		
+		focus = {
+		id = DRC_Canejo_Intervention
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_Algerian_Outrage
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Algerian_Outrage }
+		mutually_exclusive = { focus = DRC_Spanish_Compensation }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = SPR }
+		  create_wargoal = { type = annex_everything target = D01 } 
+			}
+		}
+		
+		focus = {
+		id = DRC_Insult_The_French
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_Spanish_Compensation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Spanish_Compensation focus = DRC_Canejo_Intervention}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  FRA = {
+			add_ideas = insulted
+			}
+		 }
+		}
+		
+		focus = {
+		id = DRC_Rabbitborne_Troops
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Insult_The_French
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Insult_The_French }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = rabbitborne_troops
+		  add_equipment_to_stockpile = {
+				type = transport_plane_equipment_1
+				amount = 100
+		  }
+			}
+		}
+		
+		focus = {
+		id = DRC_No_More_Rabbit_Baguettes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Insult_The_French
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Insult_The_French }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = FRA }
+			}
+		}
+		
+		focus = {
+		id = DRC_No_More_Rabbit_Bolognese
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_Insult_The_French
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Insult_The_French }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = ITA }
+			}
+		}
+		
+		focus = {
+		id = DRC_Not_Going_To_Brazil
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_No_More_Rabbit_Baguettes
+		bypass = {
+
+		}
+		cost = 5
+		mutually_exclusive = { focus = DRC_Demand_Macau }
+		prerequisite = { focus = DRC_No_More_Rabbit_Baguettes }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = COL }
+		  create_wargoal = { type = annex_everything target = VEN }
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+		focus = {
+		id = DRC_But_Almost
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Not_Going_To_Brazil
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Not_Going_To_Brazil }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = ECU }
+		  create_wargoal = { type = annex_everything target = PRU }
+		  create_wargoal = { type = annex_everything target = BOL }
+			}
+		}
+		
+		focus = {
+		id = DRC_Get_The_Plata
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_But_Almost
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_But_Almost }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = CHL }
+		  create_wargoal = { type = annex_everything target = ARG }
+		  create_wargoal = { type = annex_everything target = URG }
+		  create_wargoal = { type = annex_everything target = PAR }
+			}
+		}
+		
+		focus = {
+		id = DRC_Become_The_BRAZIL
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Get_The_Plata
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Get_The_Plata }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = BRA }
+		  add_timed_idea = {
+				idea = i_am_speed
+				days = 90
+				}
+			}
+		}
+		
+		focus = {
+		id = DRC_Demand_Macau
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_No_More_Rabbit_Baguettes
+		bypass = {
+
+		}
+		cost = 5
+		mutually_exclusive = { focus = DRC_Not_Going_To_Brazil }
+		prerequisite = { focus = DRC_No_More_Rabbit_Baguettes }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  transfer_state = 729
+			}
+		}
+		
+		focus = {
+		id = DRC_Take_Out_Chinese_Takeout
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Demand_Macau
+		bypass = {
+
+		}
+		cost = 5
+		
+		prerequisite = { focus = DRC_Demand_Macau }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  create_wargoal = { type = annex_everything target = CHI }
+		  create_wargoal = { type = annex_everything target = YUN }
+		  create_wargoal = { type = annex_everything target = GXC }
+			}
+		}
+		
+		
+		################################
+		
+	focus = {
+		id = DRC_Free_Radios_For_Nobles
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_radar
+		x = 4
+		y = 1
+		relative_position_id = DRC_suppress_the_people
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_suppress_the_people }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_stability = 0.15
+		  set_technology = { 
+			radio = 1
+			}
+			}
+		}
+		
+	focus = {
+		id = DRC_Censor_The_News
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 1
+		relative_position_id = DRC_Free_Radios_For_Nobles
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Free_Radios_For_Nobles }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = state_information_monopoly
+			}
+		}
+		
+	focus = {
+		id = DRC_Government_Philosophers
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		icon =  GFX_focus_research
+		x = -2
+		y = 1
+		relative_position_id = DRC_Censor_The_News
+		ai_will_do = {
+			factor = 8
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Censor_The_News }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_research_slot = 1
+			}
+		}
+		
+	focus = {
+		id = DRC_Has_To_Be_Pointy
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_rocketry
+		x = 0
+		y = 1
+		relative_position_id = DRC_Government_Philosophers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Government_Philosophers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_tech_bonus = {
+				name = DRC_pointy
+				bonus = 7.5
+				uses = 3
+				category = rocketry
+				category = nuclear
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Insititute_Thought_Opression
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_support_fascism
+		x = 0
+		y = 1
+		relative_position_id = DRC_Censor_The_News
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Censor_The_News }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_popularity = { ideology = fascism popularity = 0.2 }
+		  add_political_power = 25
+			}
+		}
+		
+		focus = {
+		id = DRC_Proclaim_Godhood
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Insititute_Thought_Opression
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Insititute_Thought_Opression }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 500
+			}
+		}
+		
+		focus = {
+		id = DRC_Ban_Condoms
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Censor_The_News
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Censor_The_News }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = chico_mandate1
+			add_idea = chico_mandate2
+			}
+			}
+		}
+		
+		focus = {
+		id = DRC_Ban_Contraceptives
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Ban_Condoms
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Ban_Condoms }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = chico_mandate2
+			add_idea = chico_mandate3
+			}
+			}
+		}
+		
+		focus = {
+		id = DRC_Ban_Abortion
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Ban_Contraceptives
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Ban_Contraceptives }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = chico_mandate3
+			add_idea = chico_mandate4
+			}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		#############################
+		
+		
+		
+		
+		
+	focus = {
+		id = DRC_Put_The_People_To_Work
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 18
+		y = 1
+		relative_position_id = DRC_suppress_the_people
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_suppress_the_people }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Land_Of_The_Free_Workers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -6
+		y = 1
+		relative_position_id = DRC_Put_The_People_To_Work
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Put_The_People_To_Work }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Opium_Plantations
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_Land_Of_The_Free_Workers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Land_Of_The_Free_Workers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+		
+		
+	focus = {
+		id = DRC_Expand_Plantations
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Opium_Plantations
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Opium_Plantations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Government_Funded_Plantations
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Expand_Plantations
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Expand_Plantations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Official_Statement_On_Opium
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Government_Funded_Plantations
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Government_Funded_Plantations }
+		prerequisite = { focus = DRC_Fuel_Chikos_Opium_Addiction}
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_political_power = 150
+			}
+		}
+		
+	focus = {
+		id = DRC_Opium_For_The_Army
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Official_Statement_On_Opium
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Official_Statement_On_Opium }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = opium_to_army
+			}
+		}
+		
+		
+		
+		focus = {
+		id = DRC_Distribute_Opium_To_Leaders
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_Opium_Plantations
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Opium_Plantations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = opium_to_leaders
+			}
+		}
+		
+	focus = {
+		id = DRC_Fuel_Chikos_Opium_Addiction
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Distribute_Opium_To_Leaders
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Distribute_Opium_To_Leaders }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_country_leader_trait = opioid_addiction1
+			}
+		}
+		
+	focus = {
+		id = DRC_Prescribe_More_For_Chiko
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Fuel_Chikos_Opium_Addiction
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Fuel_Chikos_Opium_Addiction }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_country_leader_trait = opioid_addiction1
+			add_country_leader_trait = opioid_addiction2
+			}
+		}
+		
+	focus = {
+		id = DRC_Fuel_Chikos_Addictions
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Prescribe_More_For_Chiko
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Prescribe_More_For_Chiko }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_country_leader_trait = opioid_addiction2
+			add_country_leader_trait = opioid_addiction3
+			}
+		}
+		
+	focus = {
+		id = DRC_Invent_Pervitin
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Fuel_Chikos_Addictions
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Fuel_Chikos_Addictions }
+		prerequisite = { focus = DRC_Opium_For_The_Army }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_country_leader_trait = i_feel_invincible
+			}
+		}
+		
+		
+		
+
+		
+		
+		focus = {
+		id = DRC_Worsen_Work_Conditions
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Land_Of_The_Free_Workers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Land_Of_The_Free_Workers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = worsened_work_conditions1
+			}
+		}
+		
+	focus = {
+		id = DRC_Remove_Health_Benefits
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Worsen_Work_Conditions
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Worsen_Work_Conditions }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = no_health_benefits
+			}
+		}
+		
+	focus = {
+		id = DRC_Legally_Enforced_Overtime
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_Worsen_Work_Conditions
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Worsen_Work_Conditions }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = worsened_work_conditions1
+			add_idea = worsened_work_conditions2
+			}
+			}
+		}
+		
+	focus = {
+		id = DRC_Until_Moral_Improves
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Legally_Enforced_Overtime
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Legally_Enforced_Overtime }
+		prerequisite = { focus = DRC_Remove_Health_Benefits }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = worsened_work_conditions2
+			add_idea = worsened_work_conditions3
+			}
+			}
+		}
+		
+		###############################
+		
+		
+		focus = {
+		id = DRC_Drill_In_Tel_Aviv
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Put_The_People_To_Work
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Put_The_People_To_Work }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 16
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Deeper_Oil_Wells
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Drill_In_Tel_Aviv
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Drill_In_Tel_Aviv }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 28
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Even_Deeper_Oil_Wells
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Deeper_Oil_Wells
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Deeper_Oil_Wells }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 34
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Exploit_Resources
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_Drill_In_Tel_Aviv
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Drill_In_Tel_Aviv }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+						type = tungsten
+						amount = 6
+						}
+					add_resource = {
+						type = steel
+						amount = 8
+						}
+					add_resource = {
+						type = aluminium
+						amount = 6
+						}
+					add_resource = {
+						type = rubber
+						amount = 6
+						}
+					}
+			}
+		}
+		
+	focus = {
+		id = DRC_Further_Exploitation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Exploit_Resources
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Exploit_Resources }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+			add_resource = {
+						type = tungsten
+						amount = 4
+						}
+					add_resource = {
+						type = steel
+						amount = 20
+						}
+					add_resource = {
+						type = aluminium
+						amount = 4
+						}
+					add_resource = {
+						type = rubber
+						amount = 8
+						}
+					}
+			}
+		}
+		
+	focus = {
+		id = DRC_Self_Sufficiency
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Further_Exploitation
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Further_Exploitation }
+		prerequisite = { focus = DRC_Even_Deeper_Oil_Wells }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+			add_resource = {
+						type = tungsten
+						amount = 4
+						}
+					add_resource = {
+						type = steel
+						amount = 15
+						}
+					add_resource = {
+						type = aluminium
+						amount = 6
+						}
+					add_resource = {
+						type = rubber
+						amount = 14
+						}
+					}
+			}
+		}
+		
+		#############################
+
+
+		focus = {
+		id = DRC_Turn_Al_Aqsa_Mosque_To_Factory
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 5
+		y = 1
+		relative_position_id = DRC_Put_The_People_To_Work
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Put_The_People_To_Work }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Recycle_Jajjada
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = DRC_Turn_Al_Aqsa_Mosque_To_Factory
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Turn_Al_Aqsa_Mosque_To_Factory }
+		mutually_exclusive = { focus = DRC_Burn_Jajjada }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Turn_Mosques_To_Distribution_Centres
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Recycle_Jajjada
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Recycle_Jajjada }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Read_Ancient_Scrolls
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Turn_Mosques_To_Distribution_Centres
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Turn_Mosques_To_Distribution_Centres }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = ancient_scrolls
+			}
+		}
+		
+		
+		
+		focus = {
+		id = DRC_Burn_Jajjada
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = DRC_Turn_Al_Aqsa_Mosque_To_Factory
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Turn_Al_Aqsa_Mosque_To_Factory }
+		mutually_exclusive = { focus = DRC_Recycle_Jajjada }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = burned_jajjada
+			}
+		}
+		
+	focus = {
+		id = DRC_Turn_Mosques_To_Factories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Burn_Jajjada
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Burn_Jajjada }
+		#mutually_exclusive = { focus = DRC_Recycle_Jajjada }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Turn_Refugee_Camps_To_Factories
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Turn_Mosques_To_Factories
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Turn_Mosques_To_Factories  focus = DRC_Turn_Mosques_To_Distribution_Centres}
+		#mutually_exclusive = { focus = DRC_Recycle_Jajjada }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Scientific_Studies
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		icon =  GFX_focus_research
+		x = -1
+		y = 1
+		relative_position_id = DRC_Turn_Refugee_Camps_To_Factories
+		ai_will_do = {
+			factor = 8
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Turn_Refugee_Camps_To_Factories focus = DRC_Read_Ancient_Scrolls }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_research_slot = 1
+			}
+		}
+		
+	
+		
+	
+		
+		##########################
+		
+		
+		focus = {
+		id = DRC_Start_The_Chiko_Jihad
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_axis_build_infantry
+		x = -1
+		y = 4
+		relative_position_id = DRC_Proclaim_Godhood
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = DRC_ }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Arm_The_People
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = DRC_Start_The_Chiko_Jihad
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Start_The_Chiko_Jihad }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  army_experience = 20
+		  add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			}
+		}
+		
+	focus = {
+		id = DRC_More_Soldiers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Arm_The_People
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Arm_The_People }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = more_soldiers
+			}
+		}
+		
+	focus = {
+		id = DRC_Rabbits_Resistance
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_More_Soldiers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_More_Soldiers }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = rabbits_resistance
+			}
+		}
+		
+		
+	focus = {
+		id = DRC_Middle_Eastern_Special_Operations
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Start_The_Chiko_Jihad
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Start_The_Chiko_Jihad }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Geneva_Checklist
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Middle_Eastern_Special_Operations
+		ai_will_do = {
+			factor = 15
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Middle_Eastern_Special_Operations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			}
+		}
+		
+	focus = {
+		id = DRC_Liberate_Domesticated_Rabbits
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Middle_Eastern_Special_Operations
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Middle_Eastern_Special_Operations }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = liberated_rabbits
+			}
+		}
+		
+	focus = {
+		id = DRC_Armoured_Jihad
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Geneva_Checklist
+		
+		available = {
+			NOT = {
+					has_completed_focus = DRC_Swedish_Tank_Bunny
+					}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Geneva_Checklist }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_tech_bonus = {
+						name = armor_bonus
+						bonus = 1.5
+						uses = 2
+						category = armor
+					}
+			}
+		}
+		
+	focus = {
+		id = DRC_Aquire_Toyota_Pickups
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Geneva_Checklist
+		
+		available = {
+			if = {
+				has_tech = motorised_infantry
+				}
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Geneva_Checklist }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 3000
+			}
+			}
+		}
+		
+		
+		
+		focus = {
+		id = DRC_Fund_The_Military
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = DRC_Start_The_Chiko_Jihad
+		ai_will_do = {
+			factor = 18
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Start_The_Chiko_Jihad }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = army_funding
+			}
+		}
+		
+		
+	focus = {
+		id = DRC_Siphon_Military_Veterans_Fund
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Fund_The_Military
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Fund_The_Military }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = army_funding
+			add_idea = army_funding2
+			}
+			}
+		}
+		
+	focus = {
+		id = DRC_Expand_Military_Police
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = DRC_Fund_The_Military
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Fund_The_Military }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = military_discipline
+			}
+		}
+		
+		
+	focus = {
+		id = DRC_Retreating_Is_Treason
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DRC_Expand_Military_Police
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Expand_Military_Police }
+		#mutually_exclusice = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  swap_ideas = {
+			remove_idea = military_discipline
+			add_idea = military_discipline2
+		  }
+			}
+		}
+		
+		
+		
+		
+		#############################
+		
+		
+		
+		focus = {
+		id = DRC_Flying_Nazism
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_build_airforce
+		x = -3
+		y = 2
+		relative_position_id = DRC_Caucasian_Wall
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = DRC_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				}
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+	
+	focus = {
+		id = DRC_Blue_Skies
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_doctrine
+		x = -2
+		y = 1
+		relative_position_id = DRC_Flying_Nazism
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Flying_Nazism }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+		
+	focus = {
+		id = DRC_Sunrise
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = DRC_Blue_Skies
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Blue_Skies }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+				}	
+			}
+		}
+		
+		focus = {
+		id = DRC_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_bomber
+		x = 0
+		y = 1
+		relative_position_id = DRC_Flying_Nazism
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Flying_Nazism }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_More_Bombers
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_occupy_start_war
+		x = 0
+		y = 1
+		relative_position_id = DRC_Bombers
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Bombers }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.5
+				uses = 1
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				}
+
+			}
+		}
+		
+		focus = {
+		id = DRC_Fighters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter
+		x = 2
+		y = 1
+		relative_position_id = DRC_Flying_Nazism
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Flying_Nazism }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_More_Fighters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+		relative_position_id = DRC_Fighters
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Fighters }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_command_focus
+				bonus = 1.5
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+				}
+
+			}
+		}
+
+	##################################################
+	
+	
+	focus = {
+		id = DRC_Establish_The_DRCaii_Fleet
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_build_navy
+		x = 6
+		y = 0
+		relative_position_id = DRC_Flying_Nazism
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = DRC_Military_Construction }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				}
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+	
+	focus = {
+		id = DRC_Discover_The_Steeringwheel
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+		relative_position_id = DRC_Establish_The_DRCaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Establish_The_DRCaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+		
+	focus = {
+		id = DRC_Discover_The_Rest_of_The_Ship
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		relative_position_id = DRC_Discover_The_Steeringwheel
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Discover_The_Steeringwheel }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ship_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+				}	
+			}
+		}
+		
+		focus = {
+		id = DRC_Escorts
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_destroyer
+		x = 0
+		y = 1
+		relative_position_id = DRC_Establish_The_DRCaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Establish_The_DRCaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = escorts
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_MILF_Ships
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		relative_position_id = DRC_Escorts
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Escorts }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = Mommies
+				bonus = 1.5
+				uses = 1
+				category = cv_tech
+				}
+
+			}
+		}
+		
+		focus = {
+		id = DRC_Ocean_Liners
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_focus_generic_cruiser2
+		x = 2
+		y = 1
+		relative_position_id = DRC_Establish_The_DRCaii_Fleet
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Establish_The_DRCaii_Fleet }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = Cruisers
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+				}
+			}
+		}
+		
+	focus = {
+		id = DRC_Thicc_Ships
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		relative_position_id = DRC_Ocean_Liners
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = DRC_Ocean_Liners }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = thicc
+				bonus = 1.5
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+				}
+
+			}
+		}
+	
+	
+ }
+
+	

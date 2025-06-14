@@ -1,0 +1,1155 @@
+focus_tree = {
+    id = antarctic_dominion
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = ADO
+        }
+    }
+	
+	default = no
+	
+	continuous_focus_position = { x = 150 y = 2000 }
+	
+	focus = {
+		id = ADO_King_Julien_Strikes_Back
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 8
+		y = 0
+		#relative_position_id = AST_empower_the_workers
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = AST_workers_paradise }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  hidden_effect = {
+			news_event = antarctic_news.1
+			transfer_state = 713
+			add_state_core = 713
+			PPE = {
+				transfer_state = 980
+				add_state_core = 980
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Madagascar_Castaways
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_King_Julien_Strikes_Back
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_King_Julien_Strikes_Back }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		  add_ideas = castaway
+		}
+	}
+	
+	focus = {
+		id = ADO_Capetown_Crash
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Madagascar_Castaways
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Madagascar_Castaways }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.2
+			add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 800
+				}
+			add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 100
+				}
+			add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 120
+				}
+			  swap_ideas = {
+				remove_idea = castaway
+				add_idea = castaway2
+			  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Antarcitc_Detour
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Capetown_Crash
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Capetown_Crash }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			713 = { add_manpower = 20000}
+			add_offsite_building = { type = arms_factory level = 4 }
+			swap_ideas = {
+				remove_idea = castaway2
+				add_idea = castaway3
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Falkland_Nest
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Antarcitc_Detour
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Antarcitc_Detour }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 299
+			add_state_core = 299
+			set_capital = {
+			  state = 299
+			  remember_old_capital = no
+			}
+			swap_ideas = {
+				remove_idea = castaway3
+				add_idea = new_home
+			}
+			hidden_effect = {
+			299 = { add_manpower = 1220000}
+			299 = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Sieze_South_Georgia
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = ADO_Falkland_Nest
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Falkland_Nest }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 720
+			add_state_core = 720
+			hidden_effect = {
+			720 = { add_manpower = 912013}
+			720 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Equatorial_Beach_Houses
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Sieze_South_Georgia
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Sieze_South_Georgia }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 704
+			transfer_state = 703
+			add_state_core = 703
+			add_state_core = 704
+			hidden_effect = {
+			
+			704 = { add_manpower = 30013}
+			703 = { add_manpower = 30013}
+			704 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			703 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Theive_Tierra_Del_Fuego
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Falkland_Nest
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Falkland_Nest }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 953
+			add_state_core = 953
+			hidden_effect = {
+			953 = { add_manpower = 122000}
+			953 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Easter_Begone
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = ADO_Theive_Tierra_Del_Fuego
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Theive_Tierra_Del_Fuego }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 948
+			transfer_state = 270
+			add_state_core = 948
+			add_state_core = 270
+			hidden_effect = {
+			270 = { add_manpower = 102000}
+			948 = { add_manpower = 102000}
+			948 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_The_Turtle_Isle
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Easter_Begone
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Easter_Begone }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 649
+			add_state_core = 649
+			hidden_effect = {
+			649 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		  }
+		}
+	}
+	
+	focus = {
+		id = ADO_Operation_Pushover
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Theive_Tierra_Del_Fuego
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Theive_Tierra_Del_Fuego }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 954
+			transfer_state = 507
+			transfer_state = 949
+			add_state_core = 954
+			add_state_core = 507
+			add_state_core = 949
+			
+			hidden_effect = {
+				955 = {
+				add_building_construction = {
+				type = naval_base
+				province = 5118
+				level = 2
+				}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Emancipate_Chilean_Penguins
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Operation_Pushover
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Operation_Pushover }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CHL }
+			USA = {
+			diplomatic_relation = { 
+				country = CHL
+				relation = guarantee 
+				active = no 
+			}
+		}
+		}
+	}
+	
+	focus = {
+		id = ADO_Chopping_Block_For_Captors
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Emancipate_Chilean_Penguins
+		bypass = {
+
+		}
+		
+		available = {
+			ADO = { controls_state = 279 }
+		}
+		
+		
+		cost = 5
+		prerequisite = { focus = ADO_Emancipate_Chilean_Penguins }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = antarctic_dominion.2 }
+		}
+	}
+	
+	focus = {
+		id = ADO_Adieu_Argentina
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = ADO_Operation_Pushover
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Operation_Pushover }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ARG }
+			USA = {
+			diplomatic_relation = { 
+				country = ARG 
+				relation = guarantee 
+				active = no 
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Pressure_the_Guays
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Adieu_Argentina
+		
+		available = {
+			ADO = { controls_state = 278 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Adieu_Argentina }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			PAR = {
+				country_event = { id = antarctic_dominion.1 }
+			}
+			USA = {
+			diplomatic_relation = { 
+				country = PAR 
+				relation = guarantee 
+				active = no 
+			}
+			}
+			URG = {
+				country_event = { id = antarctic_dominion.1 }
+			}
+			USA = {
+			diplomatic_relation = { 
+				country = URG 
+				relation = guarantee 
+				active = no 
+			}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = ADO_Bolivar's_Legacy
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Pressure_the_Guays
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Pressure_the_Guays }
+		prerequisite = { focus = ADO_Chopping_Block_For_Captors }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BOL }
+			USA = {
+			diplomatic_relation = { 
+				country = BOL 
+				relation = guarantee 
+				active = no 
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Go_To_Brazil
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Bolivar's_Legacy
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Bolivar's_Legacy }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BRA }
+			USA = {
+			diplomatic_relation = { 
+				country = BRA 
+				relation = guarantee 
+				active = no 
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_De_Colonizing
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Go_To_Brazil
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Go_To_Brazil }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			transfer_state = 687
+			transfer_state = 309
+			transfer_state = 310
+			add_state_core = 687
+			add_state_core = 309
+			add_state_core = 310
+		}
+	}
+	
+	focus = {
+		id = ADO_Peruvian_Incursion
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = ADO_Chopping_Block_For_Captors
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_The_Turtle_Isle }
+		prerequisite = { focus = ADO_Chopping_Block_For_Captors }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = PRU }
+			USA = {
+			diplomatic_relation = { 
+				country = PRU 
+				relation = guarantee 
+				active = no 
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Not_So_Grand_Colombia
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Peruvian_Incursion
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Peruvian_Incursion }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = COL }
+			USA = {
+			diplomatic_relation = { 
+				country = COL
+				relation = guarantee 
+				active = no 
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Entice_Equador
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = ADO_Not_So_Grand_Colombia
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Not_So_Grand_Colombia }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ECU = {
+				country_event = { id = antarctic_dominion.3 }
+			}
+			USA = {
+			diplomatic_relation = { 
+				country = VEN 
+				relation = guarantee 
+				active = no 
+			}
+			}
+		
+		}
+	}
+	
+	focus = {
+		id = ADO_Vanquish_Venezuela
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Not_So_Grand_Colombia
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Not_So_Grand_Colombia }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = VEN }
+			USA = {
+			diplomatic_relation = { 
+				country = VEN 
+				relation = guarantee 
+				active = no 
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Dominion_No_More
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = ADO_De_Colonizing
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_De_Colonizing }
+		prerequisite = { focus = ADO_Vanquish_Venezuela }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = ADO_ARE
+		}
+	}
+	
+	
+	
+	
+	focus = {
+		id = ADO_Kowalski_Status_Report
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 10
+		y = 0
+		relative_position_id = ADO_Madagascar_Castaways
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = ADO_De_Colonizing }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ADO_Veni_Pisces_Comedimus
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = ADO_Kowalski_Status_Report
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Kowalski_Status_Report }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 50
+			add_ideas = ship_building
+		}
+	}
+	
+	focus = {
+		id = ADO_Our_Domain
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Veni_Pisces_Comedimus
+		
+		available = {
+			ADO = { controls_state = 299 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Veni_Pisces_Comedimus }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			299 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = { #If own Tierra fuego
+				limit = {
+					owns_state = 953
+				}
+					
+					953 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			
+		}
+	}
+	
+	
+	
+	focus = {
+		id = ADO_Falkland_Fisheries
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = ADO_Kowalski_Status_Report
+		
+		available = {
+			ADO = { controls_state = 299 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Kowalski_Status_Report }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			299 = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Human_Operated_Quarries
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = ADO_Falkland_Fisheries
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Falkland_Fisheries }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			299 = {
+				add_resource = {
+					type = steel
+					amount = 16
+					}
+				add_resource = {
+					type = tungsten
+					amount = 8
+					}
+				add_resource = {
+					type = chromium
+					amount = 3
+					}
+				}
+			}
+		}
+	
+	
+	
+	focus = {
+		id = ADO_Antarctic_Industrialisation
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = ADO_Our_Domain
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Our_Domain }
+		prerequisite = { focus = ADO_Human_Operated_Quarries }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = ADO_Welcome_To_Brazil
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = ADO_Antarctic_Industrialisation
+		
+		available = {
+			ADO = { controls_state = 500 }
+		}
+		
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Antarctic_Industrialisation }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ADO_Yes_Rico_Kaboom
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 0
+		y = 6
+		relative_position_id = ADO_Kowalski_Status_Report
+		bypass = {
+
+		}
+		cost = 5
+		#prerequisite = { focus = ADO_Kowalski_Status_Report }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 50
+		}
+	}
+	
+	focus = {
+		id = ADO_Less_Is_More
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = ADO_Yes_Rico_Kaboom
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Yes_Rico_Kaboom }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = less_is_more
+		}
+	}
+	
+	focus = {
+		id = ADO_Antarctic_Special_Forces
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		icon =  GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = ADO_Yes_Rico_Kaboom
+		bypass = {
+
+		}
+		cost = 5
+		prerequisite = { focus = ADO_Yes_Rico_Kaboom }
+		#mutually_exclusive = { focus =  }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = antarctic_special_forces
+		}
+	}
+	
+	
+	
+ }
+
+	
