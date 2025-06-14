@@ -1,0 +1,29 @@
+
+state={
+	id=629
+	name="STATE_629"
+
+	history={
+		owner = KAW
+		add_core_of = KAW
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+
+		victory_points = {
+			12021 3 
+		}
+	}
+
+	provinces={
+		10048 12021 
+	}
+	manpower = 38336
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=543
+	name="STATE_543"
+
+	history={
+		add_core_of = PPE
+		owner = PPE
+		victory_points = {
+			5128 20 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+			5222 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		5128 5185 5222 8180 8188 10993 11015 
+	}
+	manpower=3694611
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

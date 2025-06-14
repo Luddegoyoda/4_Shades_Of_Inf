@@ -1,0 +1,28 @@
+state={
+	id=975
+	name="STATE_975"
+
+	history={
+		owner = KAW
+		add_core_of = KAW
+		buildings = {
+			infrastructure = 3
+			air_base = 5
+			industrial_complex = 1
+			dockyard = 1
+			4180 = {
+				naval_base = 10
+			}
+		}
+		victory_points = {
+			4180 25 
+		}
+	}
+	provinces={
+		4180 
+	}
+	manpower=38336
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,28 @@
+state={
+	id=971
+	name="STATE_971"
+	provinces={
+		1015 1086 7176 11970 
+	}
+	history={
+		add_core_of = DRC
+		owner = DRC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+
+		}
+		victory_points = {
+			1086 1 
+		}
+
+	}
+	
+	
+	manpower = 3000000
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

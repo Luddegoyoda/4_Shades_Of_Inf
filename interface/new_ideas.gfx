@@ -1,0 +1,38 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_reclusive_society"
+		texturefile = "gfx/interface/ideas/idea_reclusive_society.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_reclusive_society3"
+		texturefile = "gfx/interface/ideas/idea_reclusive_society3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_land_of_love"
+		texturefile = "gfx/interface/ideas/idea_land_of_love.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_neko_worship"
+		texturefile = "gfx/interface/ideas/idea_neko_worship.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_weak_industry1"
+		texturefile = "gfx/interface/ideas/idea_weak_industry1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_weak_industry2"
+		texturefile = "gfx/interface/ideas/idea_weak_industry2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_weak_industry3"
+		texturefile = "gfx/interface/ideas/idea_weak_industry3.dds"
+	}
+	
+}

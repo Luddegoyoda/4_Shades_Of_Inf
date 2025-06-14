@@ -1,0 +1,26 @@
+state={
+	id=979
+	name="STATE_979"
+	provinces={
+		1995 7916 7984 10896 10476 7448 12877 10852 12248 7584 
+	}
+	
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			7984 5 
+		}
+
+		add_core_of = AFG
+
+	}
+	
+	manpower = 832860
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

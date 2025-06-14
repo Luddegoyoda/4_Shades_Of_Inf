@@ -1,0 +1,21 @@
+state={
+	id=974
+	name="STATE_974"
+
+	history={
+		owner = KAW
+		add_core_of = KAW
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		7195 
+	}
+	manpower=38336
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

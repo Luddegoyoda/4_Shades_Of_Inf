@@ -1,0 +1,151 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_sakura_large"
+		texturefile = "gfx/leaders/KAW/Portrait_Sakura_DEM.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_sakura_small"
+		texturefile = "gfx/leaders/small/KAW/Portrait_Sakura_DEM.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_kinsi_large"
+		texturefile = "gfx/leaders/KAW/Portrait_Kinsi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_kinsi_small"
+		texturefile = "gfx/leaders/small/KAW/Portrait_Kinsi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_monika_large"
+		texturefile = "gfx/leaders/KAW/Portrait_Monika_Queen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_monika_small"
+		texturefile = "gfx/leaders/small/KAW/Portrait_Monika_Queen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_yora_large"
+		texturefile = "gfx/leaders/KAW/Portrait_Yora.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_kaw_yora_small"
+		texturefile = "gfx/leaders/small/KAW/Portrait_Yora.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_portrait_ief_victorius_large"
+		texturefile = "gfx/leaders/IEF/Portrait_Victorius.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_ief_victorius_small"
+		texturefile = "gfx/leaders/small/IEF/Portrait_Victorius.dds"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_portrait_ado_skipper_large"
+		texturefile = "gfx/leaders/ADO/Portrait_Skipper.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_ado_skipper_small"
+		texturefile = "gfx/leaders/small/ADO/Portrait_Skipper.dds"
+	}
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_portrait_drc_chiko_large"
+		texturefile = "gfx/leaders/DRC/Portrait_Chiko.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_drc_chiko_small"
+		texturefile = "gfx/leaders/small/DRC/Portrait_Chiko.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_drc_musmatta_large"
+		texturefile = "gfx/leaders/DRC/Portrait_Musmatta.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_drc_musmatta_small"
+		texturefile = "gfx/leaders/small/DRC/Portrait_Musmatta.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_drc_kenobi_large"
+		texturefile = "gfx/leaders/DRC/Portrait_Kenobi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_drc_kenobi_small"
+		texturefile = "gfx/leaders/small/DRC/Portrait_Kenobi.dds"
+	}
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_portrait_cec_neutral_leader_large"
+		texturefile = "gfx/leaders/CEC/Portrait_Leader_Neutral.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_cec_neutral_leader_small"
+		texturefile = "gfx/leaders/small/CEC/Portrait_Leader_Neutral.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_cec_democratic_leader_large"
+		texturefile = "gfx/leaders/CEC/Portrait_Leader_DEM.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_cec_democratic_leader_small"
+		texturefile = "gfx/leaders/small/CEC/Portrait_Leader_DEM.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_cec_moose_large"
+		texturefile = "gfx/leaders/CEC/Portrait_Moose.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_cec_moose_small"
+		texturefile = "gfx/leaders/small/CEC/Portrait_Moose.dds"
+	}
+	
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_portrait_ppe_puff_large"
+		texturefile = "gfx/leaders/PPE/Portrait_Puff_FASCISM.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_ppe_puff_small"
+		texturefile = "gfx/leaders/small/PPE/Portrait_Puff_FASCISM.dds"
+	}
+	
+	
+
+	
+}

@@ -1,0 +1,125 @@
+﻿capital = 975
+
+oob = "KAW_1936"
+
+#Order of recruitment gives prio for country leaders
+
+recruit_character = KAW_Sakura
+recruit_character = KAW_Monika
+recruit_character = KAW_Yora
+recruit_character = KAW_Kinsi
+recruit_character = KAW_Nanami
+recruit_character = KAW_Miyako
+recruit_character = KAW_Riko
+recruit_character = KAW_Sora
+recruit_character = KAW_Shinobu
+recruit_character = KAW_Takara
+recruit_character = KAW_Yasu
+recruit_character = KAW_Suzuki
+recruit_character = KAW_Tomiko
+recruit_character = KAW_Emi
+recruit_character = KAW_Aiko
+
+
+
+
+set_research_slots = 2
+set_stability = 0.40
+set_war_support = 0.20
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+
+set_convoys = 100
+
+
+set_politics = {
+	ruling_party = kawaiism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	kawaiism = 100
+	fascism = 0
+	communism = 0
+	neutrality = 0
+}
+
+add_ideas = {
+	reclusive_society
+	weak_industry1
+	#land_of_love
+	#neko_worship
+}
+
+set_power_balance = {
+    id = KAW_supremacy_balance
+}
+
+#add_power_balance_modifier = {
+#    id = KAW_supremacy_balance    
+#    modifier = KAW_reformist_push 
+#	 modifier = KAW_traditionalist_push 
+#}
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 20
+		communism = 5
+		neutrality = 50
+	}
+}

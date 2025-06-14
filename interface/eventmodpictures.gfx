@@ -1,0 +1,52 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_contact_british"
+		texturefile = "gfx/event_pictures/contact_brits.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_emerald_monika"
+		texturefile = "gfx/event_pictures/emerald_monika.dds"
+	}
+	
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_death_of_sakura"
+		texturefile = "gfx/event_pictures/death_of_sakura.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_monika_ascension"
+		texturefile = "gfx/event_pictures/monika_ascension.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_chico_supression"
+		texturefile = "gfx/event_pictures/chico_supression.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_moose_vandring"
+		texturefile = "gfx/event_pictures/moose_vandring.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_to_be_amputee"
+		texturefile = "gfx/event_pictures/to_be_amputee.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_roosevelt_falls"
+		texturefile = "gfx/event_pictures/roosevelt_falls.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_roosevelt_beheded"
+		texturefile = "gfx/event_pictures/roosevelt_beheded.dds"
+	}
+	
+}

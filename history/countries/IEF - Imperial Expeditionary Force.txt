@@ -1,0 +1,112 @@
+﻿capital = 978
+
+oob = "KAW_1936"
+
+#Order of recruitment gives prio for country leaders
+
+recruit_character = IEF_Victorius
+recruit_character = IEF_Commander
+recruit_character = IEF_Nanami
+recruit_character = IEF_Miyako
+recruit_character = IEF_Riko
+recruit_character = IEF_Sora
+recruit_character = IEF_Shinobu
+recruit_character = IEF_Takara
+recruit_character = IEF_Yasu
+recruit_character = IEF_Suzuki
+recruit_character = IEF_Tomiko
+recruit_character = IEF_Emi
+recruit_character = IEF_Aiko
+
+
+
+
+set_research_slots = 2
+set_stability = 0.40
+set_war_support = 0.20
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+
+set_convoys = 0
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	kawaiism = 10
+	fascism = 80
+	communism = 0
+	neutrality = 10
+}
+
+add_ideas = {
+	unindustrialised_land
+	disorganised_army
+}
+
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 20
+		communism = 5
+		neutrality = 50
+	}
+}
